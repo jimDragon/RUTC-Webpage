@@ -14,6 +14,7 @@ ul {
 }
 
 #top-scroll {
+    width: 55px;
     display: none;
     position: fixed;
     bottom: 1em;
@@ -25,8 +26,13 @@ ul {
     color: white;
     cursor: pointer;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 18px;
+    box-shadow: 0 8px 4px 1px rgba(0,0,0,0.2);
+}
+
+#top-scroll img {
+    width: 100%;
 }
   
 #top-scroll:hover {
@@ -46,7 +52,6 @@ ul {
 }
 
 .section-title {
-    padding-top: .8em;
     letter-spacing: 0.2em;
     font-size: 1.8em;
     color: #FEC590;
@@ -61,7 +66,7 @@ ul {
 
 /* Cards */
 .scrolling-wrapper {
-    padding: 2% 6% 3% 10%;
+    padding: 4% 6% 10% 10%;
     transform: skewY(2.8deg);
     display: flex;
     flex-wrap: nowrap;
@@ -76,6 +81,11 @@ ul {
     color: black;
     background-color: #EEE7CB;
     box-shadow: 0 8px 6px 2px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card img {
@@ -131,7 +141,7 @@ ul {
 
 .container {
     text-align: center;
-    padding: 3% 7%;
+    padding: 10% 7% 3%;
 }
 
 .menu {
@@ -238,6 +248,11 @@ nav ul li a:hover {
     background-color: #F76844;
     box-shadow: 0px 3px 6px rgb(129, 44, 10);    
     z-index: 1;
+    transition: all .2s ease-in-out;
+}
+
+#volunteers .btn:hover {
+    transform: scale(1.05);
 }
 
 #volunteers .btn:hover {
@@ -326,10 +341,12 @@ nav ul li a:hover {
 .icons img {
     width: 70%;
     padding: 0.5em;
+    transition: all .15s ease-in-out;
 }
 
 .icons img:hover {
     filter: invert();
+    transform: scale(1.05);
 }
 
 #media p {
@@ -340,9 +357,14 @@ nav ul li a:hover {
 /* Responsive designs */
 @media only screen and (min-width: 600px) {
 
+    /* Global */
+    .container {
+        padding: 6% 7% 1%;
+    }
+
     /* Cards */
     .scrolling-wrapper {
-        padding: 0 6% 8% 10%;
+        padding: 3% 6% 8% 10%;
     }
 
     .card {
@@ -355,6 +377,10 @@ nav ul li a:hover {
 }
 
 @media only screen and (min-width: 875px) {
+
+    .container {
+        padding: 5% 7% 1%;
+    }
 
     /* Line Up Section */
     #line-up .section-title {
@@ -397,7 +423,7 @@ nav ul li a:hover {
     
     /* Cards */
     .scrolling-wrapper {
-        padding: 0 6% 5% 10%;
+        padding: 3% 6% 5% 10%;
     }
 
     .card {
@@ -428,9 +454,14 @@ nav ul li a:hover {
 
 @media only screen and (min-width: 1024px) {
 
+    /* Global */
+    .container {
+        padding: 6% 7% 0;
+    }
+
     /* Cards */
     .scrolling-wrapper {
-        padding: 0 6% 6% 10%;
+        padding: 3% 6% 6% 10%;
     }
 
     .card {
@@ -453,6 +484,10 @@ nav ul li a:hover {
 
     #volunteers .btn {
         margin: 5% 15% 28% 15%;
+    }
+
+    #explore .container {
+        padding-top: 3%;
     }
 }
 /* @media only screen and (min-width: 1600px) {} */
