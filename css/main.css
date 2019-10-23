@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand:500&display=swap');
+
 /* Global */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Quicksand', sans-serif;
     color: white;
     margin: 0;
-    background-color: #112D35;
+    background-color: #19191B;
     scroll-behavior: smooth;
 }
 
@@ -48,11 +51,12 @@ ul {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    box-shadow: 0px 6px 6px rgb(173, 41, 41);
+    box-shadow: 0px 6px 6px #AD2929;
 }
 
 .section-title {
-    letter-spacing: 0.2em;
+    /* font-family: 'Oswald', sans-serif; */
+    letter-spacing: 0.1em;
     font-size: 1.8em;
     color: #FEC590;
     display: flex;
@@ -85,7 +89,7 @@ ul {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .card img {
@@ -127,7 +131,7 @@ ul {
 }
 
 #showcase .btn:hover {
-    background-color: rgb(245, 84, 84);
+    background-color: #F55454;
 }
 
 @keyframes move {
@@ -161,7 +165,7 @@ nav ul {
     width: 60%;
     height: 100%;
     text-align: left;
-    background: rgb(25, 25, 27);
+    background: #000000;
     padding-top: 2em;
 }
 
@@ -202,11 +206,11 @@ nav ul li a:hover {
 
 #events .btn {
     background-color: #F76844;
-    box-shadow: 0px 6px 6px rgb(170, 66, 25);
+    box-shadow: 0px 6px 6px #AA4219;
 }
 
 #events .btn:hover {
-    background-color: rgb(243, 125, 95);
+    background-color: #F37D5F;
 }
 
 /* Volunteers Section */
@@ -246,7 +250,7 @@ nav ul li a:hover {
 
 #volunteers .btn {
     background-color: #F76844;
-    box-shadow: 0px 3px 6px rgb(129, 44, 10);    
+    box-shadow: 0px 3px 6px #812C0A;    
     z-index: 1;
     transition: all .2s ease-in-out;
 }
@@ -256,7 +260,7 @@ nav ul li a:hover {
 }
 
 #volunteers .btn:hover {
-    background-color: rgb(243, 125, 95);
+    background-color: #F37D5F;
 }
 
 /* Explore Section */
@@ -286,18 +290,18 @@ nav ul li a:hover {
 
 #explore .btn {
     background-color: #F76844;
-    box-shadow: 0px 6px 6px rgb(170, 66, 25);
+    box-shadow: 0px 6px 6px #AA4219;
 }
 
 #explore .btn:hover {
-    background-color: rgb(243, 125, 95);
+    background-color: #F37D5F;
 }
 
 /* Media Section */
 #media {
     text-align: center;
     color: #FEC590;
-    background-color: rgb(25, 25, 27);
+    background-color: #19191B;
 }
 
 #media a {

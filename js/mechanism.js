@@ -2,11 +2,13 @@ var menu = document.getElementById('menu');
 var nav = document.getElementById('nav');
 var exit = document.getElementById('exit');
 
+// Open Menu
 menu.addEventListener('click', function(e) {
     nav.classList.toggle('hide-mobile');
     e.preventDefault();
 })
 
+// Close Menu
 exit.addEventListener('click', function(e) {
     nav.classList.add('hide-mobile');
     e.preventDefault();
@@ -14,12 +16,14 @@ exit.addEventListener('click', function(e) {
 
 // Navigation Smooth Scrolling
 $(document).ready(function(){
+
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
+            nav.classList.add('hide-mobile');   // Close the Menu on click
             event.preventDefault();
 
             // Store hash
