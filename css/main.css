@@ -2,7 +2,6 @@
 
 /* Global */
 body {
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Quicksand', sans-serif;
     color: white;
     margin: 0;
@@ -76,6 +75,8 @@ ul {
     flex-wrap: nowrap;
     overflow-x: auto;
 }
+
+.scrolling-wrapper::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
 
 .card {
     flex: 0 0 90%;
