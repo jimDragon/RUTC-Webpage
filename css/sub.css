@@ -1,3 +1,8 @@
+/* This is the CSS File that is being used by every sub page.
+This means that the properties of each element here are universal
+and affect all the sub pages simultaneously. 
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand:500&display=swap');
 
 /* Global */
@@ -29,8 +34,6 @@ ul {
     float: left;
     color: #EEC98F;
     padding-right: 0.5em;
-    /* display: block; */
-    /* text-align: center; */
 }
 
 .timeline li a {
@@ -126,6 +129,7 @@ ul {
 }
 
 .scrolling-wrapper::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
+.scrolling-wrapper-inv::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
 
 .card {
     flex: 0 0 90%;
@@ -148,15 +152,14 @@ ul {
 
 /* Footer */
 #footer {
-    margin-top: -50px;
+    margin-top: -120px;     /* To hide the background corners of the skew */
     background: #EEE7CB;
 }
 
 #footer .container {
     text-align: center;
     color: black;
-    /* padding: 10% 7% 3%; */
-    padding: 27% 14% 20%;
+    padding: 48% 18% 25%;
 }
 
 /* Back Button */
@@ -183,10 +186,6 @@ ul {
     background-size: cover;
 }
 
-#stage .section-title {
-    padding: 2.4em 0.9em 2.4em;
-}
-
 /* ################
 #   Volunteers    #
 #################*/
@@ -200,59 +199,134 @@ ul {
     background-size: cover;
 }
 
-/* Responsive designs */
-@media only screen and (min-width: 600px) {
+/* Responsive Designs */
+@media only screen and (min-width: 768px) {
 
-    /* Global */
+    .timeline .container {
+        padding: 5% 7% 1%;
+    }
+
     .container {
         padding: 5% 7% 6%;
     }
 
-    /* Gallery */
     #gallery .container {
-        padding: 6% 7% 0%;
+        padding: 5% 7% 0%;
     }
 
     .scrolling-wrapper {
-        padding: 4% 6% 10% 10%;
+        padding: 3% 3% 10% 8%;
     }
 
-    .card {
-        flex: 0 0 80%;
-    }
-
-    /* Footer */
-    #footer .container {
-        padding: 14% 30% 10%;
-    }
-}
-
-@media only screen and (min-width: 875px) {
-    
-    /* Global */
-    .container {
-        padding: 4% 7% 6%;
-    }
-
-    /* Gallery */
-    #gallery .container {
-        padding: 3% 7% 0%;
-    }
-
-    .scrolling-wrapper {
-        padding: 3% 6% 8% 7%;
+    .scrolling-wrapper-inv {
+        padding: 3% 3% 10% 8%;
     }
 
     .card {
         flex: 0 0 50%;
     }
 
-    /* Footer */
     #footer .container {
-        padding: 9% 38% 7%;
+        padding: 23% 35% 10%;
     }
+
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .timeline .container {
+        margin-bottom: -25px;
+    }
+
+    .scrolling-wrapper {
+        padding: 2% 3% 8% 8%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 3% 8% 8%;
+    }
+
+    .card {
+        flex: 0 0 40%;
+    }
+
+    #footer .container {
+        padding: 17% 35% 5%;
+    }
+
+    #footer .btn {
+        margin: 10% 10%;
+    }
 }
-/* @media only screen and (min-width: 1600px) {} */
+
+@media only screen and (min-width: 1440px) {
+
+    .timeline .container {
+        padding: 2% 15%;
+        margin-bottom: -80px;
+    }
+
+    .container {
+        padding: 7% 15% 4%;
+    }
+
+    #gallery .container {
+        padding: 4% 15% 0%;
+    }
+
+    .scrolling-wrapper {
+        padding: 2% 3% 7% 17%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 3% 7% 17%;
+    }
+
+    .card {
+        flex: 0 0 30%;
+    }
+
+    #footer .container {
+        padding: 13% 35% 5%;
+    }
+
+    #footer .btn {
+        margin: 8% 25%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .timeline .container {
+        padding: 2% 20%;
+        margin-bottom: -170px;
+    }
+
+    .container {
+        padding: 7% 20% 3%;
+    }
+
+    #gallery .container {
+        padding: 3% 20% 0%;
+    }
+
+    .scrolling-wrapper {
+        padding: 1% 3% 5% 21%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 1% 3% 5% 21%;
+    }
+
+    .card {
+        flex: 0 0 20%;
+    }
+
+    #footer .container {
+        padding: 8% 40% 3%;
+    }
+
+    #footer .btn {
+        margin: 8% 25%;
+    }
+}
