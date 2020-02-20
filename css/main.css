@@ -54,7 +54,6 @@ ul {
 }
 
 .section-title {
-    /* font-family: 'Oswald', sans-serif; */
     letter-spacing: 0.1em;
     font-size: 1.8em;
     color: #EEC98F; /* ORIGINAL #FEC590, FIGMA: #EEC98F */
@@ -67,6 +66,12 @@ ul {
     box-shadow: 0px 4px 4px rgb(0.2, 0, 0);
 }
 
+.panel-inv {
+    background-color: #5F897F;
+    transform: skewY(2.8deg);
+    box-shadow: 0px 4px 4px rgb(0.2, 0, 0);
+}
+
 /* Cards */
 .scrolling-wrapper {
     padding: 4% 6% 10% 10%;
@@ -76,9 +81,21 @@ ul {
     overflow-x: auto;
 }
 
+.scrolling-wrapper-inv {
+    padding: 4% 6% 10% 10%;
+    transform: skewY(-2.8deg);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
 .scrolling-wrapper::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
+.scrolling-wrapper-inv::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 0 0 90%;
     margin-right: 2em;
     text-align: left;
@@ -101,7 +118,16 @@ ul {
 .card-container {
     display: flex;
     flex-direction: column;
-    padding: 0px 1.2em 1.8em;
+    padding: 0.4em 1.5em 2em;
+}
+
+.card .btn {
+    background-color: #F76844;
+    box-shadow: 0px 6px 6px #AA4219;
+}
+
+.card .btn:hover {
+    background-color: #F37D5F;
 }
 
 /* Landing Section */
@@ -205,14 +231,14 @@ nav ul li a:hover {
     transform: skewY(2.8deg);
 }
 
-#events .btn {
+/* #events .btn {
     background-color: #F76844;
     box-shadow: 0px 6px 6px #AA4219;
 }
 
 #events .btn:hover {
     background-color: #F37D5F;
-}
+} */
 
 /* Volunteers Section */
 #volunteers .section-title {
@@ -261,40 +287,6 @@ nav ul li a:hover {
 }
 
 #volunteers .btn:hover {
-    background-color: #F37D5F;
-}
-
-/* Explore Section */
-#explore .section-title {
-    color: #EEC98F; /* ORIGINAL #FEC590, FIGMA: #EEC98F */
-}
-
-#explore .panel {
-    background-color: #5F897F;
-    transform: skewY(2.8deg);
-}
-
-#explore .container {
-    transform: skewY(-2.8deg);
-}
-
-#explore .scrolling-wrapper {
-    transform: skewY(-2.8deg);
-}
-
-#explore .card {
-    background-color: #EEE7CB;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#explore .btn {
-    background-color: #F76844;
-    box-shadow: 0px 6px 6px #AA4219;
-}
-
-#explore .btn:hover {
     background-color: #F37D5F;
 }
 
