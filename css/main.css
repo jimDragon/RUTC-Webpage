@@ -60,6 +60,14 @@ ul {
     display: flex;
 }
 
+.section-title-inv {
+    letter-spacing: 0.1em;
+    font-size: 1.8em;
+    color: #EEC98F; /* ORIGINAL #FEC590, FIGMA: #EEC98F */
+    display: flex;
+    transform: skewY(-2.8deg);
+}
+
 .panel {
     background-color: #5F897F;
     transform: skewY(-2.8deg);
@@ -231,15 +239,6 @@ nav ul li a:hover {
     transform: skewY(2.8deg);
 }
 
-/* #events .btn {
-    background-color: #F76844;
-    box-shadow: 0px 6px 6px #AA4219;
-}
-
-#events .btn:hover {
-    background-color: #F37D5F;
-} */
-
 /* Volunteers Section */
 #volunteers .section-title {
     padding: 2em 0 0.5em 0;
@@ -352,16 +351,34 @@ nav ul li a:hover {
 }
 
 /* Responsive designs */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
 
-    /* Global */
     .container {
         padding: 6% 7% 1%;
     }
 
-    /* Cards */
+    .section-title-inv {
+        transform: skewY(-2deg);
+    }
+        
+    .panel {
+        transform: skewY(-2deg);
+    }
+    
+    .panel-inv {
+        transform: skewY(2deg);
+    }
+
+    .panel .container {
+        transform: skewY(2deg);
+    }
+
     .scrolling-wrapper {
-        padding: 3% 6% 8% 10%;
+        transform: skewY(2deg);
+    }
+
+    .scrolling-wrapper-inv {
+        transform: skewY(-2deg);
     }
 
     .card {
@@ -370,20 +387,16 @@ nav ul li a:hover {
 
     .volunteers-container .container {
         padding: 10% 25% 10% 25%;
+
+    }
+
+    .volunteers-container .btn {
+        margin: 5% 20% 0 20%;
     }
 }
 
-@media only screen and (min-width: 875px) {
+@media only screen and (min-width: 1024px) {
 
-    .container {
-        padding: 5% 7% 1%;
-    }
-
-    /* Line Up Section */
-    #line-up .section-title {
-        padding-top: 0.2em;
-    }
-    
     /* Navigation-bar */
     .show-desktop {
         display: block;
@@ -393,7 +406,7 @@ nav ul li a:hover {
     .hide-desktop {
         display: none;
     }
-    
+
     #showcase .container {
         padding-top: 0;
     }
@@ -417,74 +430,105 @@ nav ul li a:hover {
     nav ul li a {
         width: auto;        
     }
-    
-    /* Cards */
+
     .scrolling-wrapper {
-        padding: 3% 6% 5% 10%;
+        padding: 2% 6% 8% 10%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 6% 8% 10%;
     }
 
     .card {
         flex: 0 0 40%;
     }
-    
-    /* Volunteers Section */
-    #volunteers .section-title {
-        padding-top: 2em;
-    }
-    
+
     .volunteers-container .container {
         padding: 10% 7% 10% 62%;
         overflow: hidden;
+        margin-bottom: 4%;
     }
     
     .volunteers-container .container::after {
         left: 55%;
     }
-    
-    /* Media Section */
+
     .media-category {
         display: flex;
         flex-direction: row;
         width: 100%;
     }
+ 
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
 
-    /* Global */
     .container {
-        padding: 6% 7% 0;
+        padding: 4% 8% 0%;
     }
 
-    /* Cards */
     .scrolling-wrapper {
-        padding: 3% 6% 6% 10%;
+        padding: 2% 6% 6% 12%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 6% 6% 12%;
     }
 
     .card {
         flex: 0 0 30%;
-        margin-right: 2em;
-    }
-
-    /* Volunteers Section */
-    #volunteers {
-        padding-bottom: 8em;
-    }
-
-    #volunteers .container {
-        padding-bottom: 1em;
     }
 
     .volunteers-container .container {
-        padding-top: 8%;
+        padding: 8% 7% 8% 62%;
+        overflow: hidden;
+        margin-bottom: 4%;
     }
-
-    #volunteers .btn {
-        margin: 5% 15% 28% 15%;
-    }
-
-    #explore .container {
-        padding-top: 3%;
-    }
+    
 }
-/* @media only screen and (min-width: 1600px) {} */
+
+@media only screen and (min-width: 2560px) {
+
+    .container {
+        padding: 3% 20% 0%;
+    }
+
+    .section-title-inv {
+        transform: skewY(-1.2deg);
+    }
+        
+    .panel {
+        transform: skewY(-1.2deg);
+    }
+    
+    .panel-inv {
+        transform: skewY(1.2deg);
+    }
+
+    .panel .container {
+        transform: skewY(1.2deg);
+    }    
+
+    .card {
+        flex: 0 0 20%;
+    }
+
+    .scrolling-wrapper {
+        padding: 1% 6% 4% 22%;
+        transform: skewY(1.2deg);
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 1% 6% 4% 22%;
+        transform: skewY(-1.2deg);
+    }
+
+    .volunteers-container .container {
+        padding: 4% 40% 4% 40%;
+    }
+
+    .volunteers-container .container::after {
+        left: 0;
+    }
+
+}
