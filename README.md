@@ -1,5 +1,5 @@
-# RUTC-Testing
-Testing repo for upcoming RUTC Festival webpage
+# RUTC-Development
+Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
 ## Site Structure
 ```
@@ -30,4 +30,13 @@ Home Page ~> [home]
       │    └── Youtube Channel
       └── Photos
            └── Photo Gallery ~> [all-photos]
+```
+
+## Layout inheritance
+```
+- home
+- list
+   ├── Event List
+   └── Band List
+- info
 ```
