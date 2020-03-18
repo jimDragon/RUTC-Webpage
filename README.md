@@ -29,11 +29,12 @@ Home Page ~> [home]
  ├── Sponsors
  │    ├── Sponsor List ~> [list]
  │    └── Donate Button
- └── Media
-      ├── Videos
-      │    └── embeded / Youtube Channel
-      └── Photos
-           └── Photo Gallery ~> [all-photos]
+ ├── Media
+ │    ├── Videos
+ │    │    └── embeded / Youtube Channel
+ │    └── Photos
+ │         └── Photo Gallery ~> [all-photos]
+ └── Social Media / Contact
 ```
 
 ## Layout inheritance
