@@ -1,33 +1,37 @@
-# RUTC-Development
+# RUTC-Webpage
 Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
 ## Site Structure
 ```
 Home Page ~> [home]
- ├── Stage Events
- │    └── Events List ~> [List]
+ ├── News
+ │    └── Post List ~> [post-list]
+ │         └── Individual Page ~> [post]
+ ├── Past Festivals
+ │    └── Events List ~> [list]
  │         └── Individual Event ~> [info]
- ├── Street Events
- │    └── Events List ~> [List]
+ ├── Past Street Events
+ │    └── Events List ~> [list]
  │         └── Individual Event ~> [info]
  ├── Workshops
- │    └── Events List ~> [List]
+ │    └── Events List ~> [list]
  │         └── Individual Event ~> [info]
  ├── Volunteers
- │    └── Individual Activity ~> [info]
+ │    └── Individual Page ~> [info]
  ├── Venues
- │    └── Venues List ~> [List]
- │         └── Individual venue ~> [info]
- ├── Food Collection
- │    └── Individual activity ~> [info]
+ │    └── Venues List ~> [list]
+ │         └── Individual Page ~> [info]
+ ├── Our philosophy
+ │    └── Individual Page ~> [info]
  ├── Bands
- │    └── Band List ~> [List]
+ │    └── Band List ~> [list]
  │         └── Individual Band ~> [info]
  ├── Sponsors
- │    └── Sponsor List ~> [List]
+ │    ├── Sponsor List ~> [list]
+ │    └── Donate Button
  └── Media
       ├── Videos
-      │    └── Youtube Channel
+      │    └── embeded / Youtube Channel
       └── Photos
            └── Photo Gallery ~> [all-photos]
 ```
@@ -36,7 +40,7 @@ Home Page ~> [home]
 ```
 - home
 - list
-   ├── Event List
-   └── Band List
+   ├── archive-list 
+   └── post-list
 - info
 ```
