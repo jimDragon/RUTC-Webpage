@@ -1,0 +1,7 @@
+navigation-bar:
+  - option: "news"
+  - option: "events"
+  - option: "volunteers"
+  - option: "explore"
+  - option: "media"
+  - option: "contact"

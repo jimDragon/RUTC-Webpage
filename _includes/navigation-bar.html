@@ -1,0 +1,7 @@
+<!-- Splash Navigation Bar -->
+<ul class="nav__list show-desktop hide-mobile" id="nav">
+        <!-- <li id="exit" class="exit-btn hide-desktop"><img src="assets/img/Icons/Exit.svg" alt="exit the menu"></li> -->
+        {% for item in site.data.navigation.navigation-bar %}
+            <li class="nav__list-item"><a class="nav__link" href="#{{ item.option }}">{{ item.option | upcase }}</a></li>
+        {% endfor %}
+</ul>

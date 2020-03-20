@@ -1,0 +1,369 @@
+/* This is the CSS File that is being used by every sub page.
+This means that the properties of each element here are universal
+and affect all the sub pages simultaneously. 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald|Quicksand:500&display=swap');
+
+/* Global */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    margin: 0;
+    background-color: #19191B;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline .container {
+    padding: 10% 7%;
+    padding-bottom: 0;
+}
+
+.timeline p {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline li {
+    float: left;
+    color: #EEC98F;
+    padding-right: 0.5em;
+}
+
+.timeline li a {
+    display: block;
+    color: #EEC98F;
+    text-align: center;
+}
+
+.container {
+    text-align: left;
+    padding: 10% 7% 6%;
+    color:#EEC98F;
+}
+
+.btn {
+    margin-top: 2em;
+    background-color: #F76844;
+    border-radius: 63px;
+    color: white;
+    padding: 13px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 6px 6px rgb(168, 52, 32);
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #F37D5F;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    font-size: 1.8em;
+    color: #EEC98F; /* ORIGINAL #FEC590, FIGMA: #EEC98F */
+    padding: 2.4em;
+}
+
+.section-title-inv {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    font-size: 1.8em;
+    color: #EEC98F; /* ORIGINAL #FEC590, FIGMA: #EEC98F */
+    padding: 2.4em;
+}
+
+.panel {
+    margin-top: 1.2em;
+    background-color: #5F897F;
+    transform: skewY(2.8deg);
+}
+
+.panel-inv {
+    margin-top: 1.2em;
+    background-color: #5F897F;
+    transform: skewY(-2.8deg);
+}
+
+/* Gallery */
+#gallery .section-title {
+    display: block;
+    padding: 0;
+    transform: skewY(-2.8deg);
+}
+
+#gallery .section-title-inv {
+    display: block;
+    padding: 0;
+    transform: skewY(2.8deg);
+}
+
+#gallery .container {
+    padding: 10% 7% 0%;
+}
+
+.scrolling-wrapper {
+    padding: 8% 6% 18% 10%;
+    transform: skewY(-2.8deg);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scrolling-wrapper-inv {
+    padding: 8% 6% 18% 10%;
+    transform: skewY(2.8deg);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scrolling-wrapper::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
+.scrolling-wrapper-inv::-webkit-scrollbar { width: 0 !important }   /* Hides scroll bar only chrome and safari */
+
+.card {
+    flex: 0 0 90%;
+    margin-right: 2em;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 8px 6px 2px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+#footer {
+    margin-top: -120px;     /* To hide the background corners of the skew */
+    background: #EEE7CB;
+}
+
+#footer .container {
+    text-align: center;
+    color: black;
+    padding: 48% 18% 25%;
+}
+
+/* Back Button */
+.back-btn {
+    text-decoration: none;
+    margin: .5em;
+    font-size: 1.4em;
+    font-weight: bold;
+    position: absolute;
+    color: #EEC98F;
+    cursor: pointer;
+}
+
+/* ##################
+#   Stage Events    #
+###################*/
+#stage .cover-img {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/2_Events/1_Stage.jpg") no-repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/2_Events/1_Stage.jpg") no-repeat;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/2_Events/1_Stage.jpg") no-repeat;
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/2_Events/1_Stage.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 20%, #19191B 100%), url("../img/2_Events/1_Stage.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* ################
+#   Volunteers    #
+#################*/
+#volunteers .cover-img {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/3_Volunteers/1_Volunteers.jpg") no-repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/3_Volunteers/1_Volunteers.jpg") no-repeat;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/3_Volunteers/1_Volunteers.jpg") no-repeat;
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../img/3_Volunteers/1_Volunteers.jpg") no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 20%, #19191B 100%), url("../img/3_Volunteers/1_Volunteers.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Responsive Designs */
+@media only screen and (min-width: 768px) {
+
+    .timeline .container {
+        padding: 5% 7% 1%;
+    }
+
+    .container {
+        padding: 5% 7% 6%;
+    }
+
+    .panel {
+        transform: skewY(2deg);
+    }
+    
+    .panel-inv {
+        transform: skewY(-2deg);
+    }
+    
+    #gallery .section-title {
+        transform: skewY(-2deg);
+    }
+    
+    #gallery .section-title-inv {
+        transform: skewY(2deg);
+    }
+
+    #gallery .container {
+        padding: 5% 7% 0%;
+    }
+
+    .scrolling-wrapper {
+        padding: 3% 3% 10% 8%;
+        transform: skewY(-2deg);
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 3% 3% 10% 8%;
+        transform: skewY(2deg);
+    }
+
+    .card {
+        flex: 0 0 50%;
+    }
+
+    #footer .container {
+        padding: 23% 35% 10%;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .timeline .container {
+        margin-bottom: -25px;
+    }
+
+    .scrolling-wrapper {
+        padding: 2% 3% 8% 8%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 3% 8% 8%;
+    }
+
+    .card {
+        flex: 0 0 40%;
+    }
+
+    #footer .container {
+        padding: 17% 35% 5%;
+    }
+
+    #footer .btn {
+        margin: 10% 10%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .timeline .container {
+        padding: 2% 15%;
+        margin-bottom: -80px;
+    }
+
+    .container {
+        padding: 7% 15% 4%;
+    }
+
+    #gallery .container {
+        padding: 4% 15% 0%;
+    }
+
+    .scrolling-wrapper {
+        padding: 2% 3% 7% 17%;
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 2% 3% 7% 17%;
+    }
+
+    .card {
+        flex: 0 0 30%;
+    }
+
+    #footer .container {
+        padding: 13% 35% 5%;
+    }
+
+    #footer .btn {
+        margin: 8% 25%;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .timeline .container {
+        padding: 2% 20%;
+        margin-bottom: -170px;
+    }
+
+    .container {
+        padding: 7% 20% 3%;
+    }
+
+    .panel {
+        transform: skewY(1.2deg);
+    }
+    
+    .panel-inv {
+        transform: skewY(-1.2deg);
+    }
+    
+    #gallery .section-title {
+        transform: skewY(-1.2deg);
+    }
+    
+    #gallery .section-title-inv {
+        transform: skewY(1.2deg);
+    }
+
+    #gallery .container {
+        padding: 3% 20% 0%;
+    }
+
+    .scrolling-wrapper {
+        padding: 1% 3% 5% 21%;
+        transform: skewY(-1.2deg);
+    }
+
+    .scrolling-wrapper-inv {
+        padding: 1% 3% 5% 21%;
+        transform: skewY(1.2deg);
+    }
+
+    .card {
+        flex: 0 0 20%;
+    }
+
+    #footer .container {
+        padding: 8% 40% 3%;
+    }
+
+    #footer .btn {
+        margin: 8% 25%;
+    }
+
+}
