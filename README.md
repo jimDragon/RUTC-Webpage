@@ -40,6 +40,7 @@ Home Page ~> [home]
 ## Layout inheritance and description
 ```
 - home ~> includes [(Splash, Feed), Carousel, Showcase, Carousel, Media, Contact]
+- post
 - list
    ├── archive-list 
    └── post-list
