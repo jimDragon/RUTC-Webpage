@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5 {
     --clr-medium: #EEC98F;
     --clr-dark: #19191B;
 
+    --clr-black: black;
+    --clr-white: white;
+
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
@@ -56,6 +59,11 @@ header {
     max-width: 285px;
 }
 
+.wrapper-carousel {
+    transform: skewY(2.8deg);
+    padding: .3rem 0 .3rem 0;
+}
+
 /* Used for applying css properties in a group of elements */
 .container {
     display: flex;
@@ -92,7 +100,7 @@ header {
 
 .btn-info {
     background-color: var(--clr-orange);
-    box-shadow: 0px 6px 6px rgb(54, 13, 0);
+    box-shadow: 0px 4px 8px rgb(138, 32, 0);
 }
 
 .nav {
@@ -164,4 +172,50 @@ header {
 
 .post-box:hover {
     transform: scale(1.02);
+}
+
+.panel {
+    margin-top: 3rem;
+    background-color: var(--clr-accent);
+    transform: skewY(-2.8deg);
+    box-shadow: 0px 4px 4px rgb(0.2, 0, 0);
+}
+
+.card-container {
+    padding: 0.6rem 1rem 2rem 2rem;
+    display: flex;
+    overflow-x: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 90%;
+    margin-right: 2rem;
+    border-radius: 20px;
+    color: var(--clr-black);
+    background-color: var(--clr-light);
+    box-shadow: 0 8px 6px 2px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.card img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1.3rem 2rem;
+}
+
+.card__content h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
 }

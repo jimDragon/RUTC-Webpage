@@ -19,26 +19,48 @@
 			<a class="btn btn-primary" href="">Join The Event</a>
 		</div>
 	</header>
-	<main>
-		<!-- Feed -->
-		{% assign section-title = site.data.navigation.navigation-bar[0] %}
-		<section id="#{{ section-title.option }}">
-			<div class="wrapper">
-				<h2>{{ section-title.option | upcase }}</h2>
-				<div class="container">
-					{% for post in site.posts %}
-					<!-- post -->
-					<div class="post-box">
-						<a href="{{ post.url }}"><h3 class="post-box__date">{{ post.date | date_to_string }}</h3></a>
-						<a href="{{ post.url }}"><h3 class="post-box__title">{{ post.title }}</h3></a>
-					</div>
+	<!-- Feed -->
+	{% assign section-title = site.data.navigation.navigation-bar[0] %}
+	<section id="#{{ section-title.option }}">
+		<div class="wrapper">
+			<h2>{{ section-title.option | upcase }}</h2>
+			<div class="container">
+				{% for post in site.posts %}
+				<!-- post -->
+				<div class="post-box">
+					<a href="{{ post.url }}"><h3 class="post-box__date">{{ post.date | date_to_string }}</h3></a>
+					<a href="{{ post.url }}"><h3 class="post-box__title">{{ post.title }}</h3></a>
+				</div>
+				{% endfor %}
+				<a class="btn btn-center btn-info" href="">Learn More</a>
+			</div>
+		</div>
+	</section>
+	<!-- Carousel -->
+	{% assign section-title = site.data.navigation.navigation-bar[1] %}
+	<section id="#{{ section-title.option }}">
+		<div class="panel">
+			<div class="wrapper-carousel">
+				<div class="wrapper">
+					<h2>{{ section-title.option | upcase }}</h2>
+				</div>
+				<div class="card-container">
+					{% for item in site.data.navigation.carousel %}
+						<!-- card -->
+						<div class="card">
+							<img src="{{ item.cover }}" alt="This is a card cover">
+							<div class="card__content">
+								<h2>{{ item.title }}</h2>
+								<p>{{ item.description }}</p>
+								<a href="{{ item.link }}" class="btn btn-info">Learn More</a>
+							</div>
+						</div>
 					{% endfor %}
-					<a class="btn btn-center btn-info" href="">Learn More</a>
 				</div>
 			</div>
-		</section>
-		
-	</main>
+		</div>
+	</section>
+
 	<!-- {{ content }} -->
 </body>
 </html>
