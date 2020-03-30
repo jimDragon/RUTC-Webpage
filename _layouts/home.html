@@ -19,7 +19,8 @@
 			<a class="btn btn-primary" href="">Join The Event</a>
 		</div>
 	</header>
-
+   
+	
 	<!-- Feed -->
 	{% assign section-title = site.data.navigation.navigation-bar[0] %}
 	<section id="#{{ section-title.option }}">
@@ -100,6 +101,21 @@
 		</div>
 	</section>
 
+	<!-- Media -->
+	{% assign section-title = site.data.navigation.navigation-bar[4] %}
+	<section id="#{{ section-title.option }}">
+		<div class="wrapper">
+			<h2>{{ section-title.option | upcase }}</h2>
+			<div class="container">
+				<div class="blob"><a class="blob__link" href=""><h2>Photos</h2></a></div>
+				<div class="blob"><a class="blob__link" href=""><h2>Videos</h2></a></div>
+			</div>
+		</div>
+	</section>
+
+	
 	<!-- {{ content }} -->
+
+
 </body>
 </html>

@@ -46,6 +46,7 @@ body {
 }
 
 header {
+    z-index: 0;
     height: 100vh;
     background-image: url(/assets/img/1_Landing/Landing_2);
     background-position: center;
@@ -180,7 +181,7 @@ section {
 }
 
 .panel {
-    margin-top: 3rem;
+    z-index: -1;
     background-color: var(--clr-accent);
     transform: skewY(-2.8deg);
     box-shadow: 0px 4px 4px rgb(0.2, 0, 0);
@@ -254,4 +255,31 @@ section {
     text-align: center;
     padding: 4.5rem 2rem;
     margin-bottom: 6rem;
+}
+
+.blob {
+    margin-bottom: 1.4rem;
+    padding: 2.8rem;
+    text-align: center;
+    border-radius: 20px;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, var(--clr-light) 150%), url(/assets/img/1_Landing/Landing_2) center;
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    background-size: cover;
+    height: 100%;
+}
+
+.blob__link {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+
+@media only screen and (min-width: 374px) {
+    .wrapper {
+        max-width: 339px;
+    }
 }
