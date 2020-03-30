@@ -60,6 +60,41 @@
 			</div>
 		</div>
 	</section>
+	<!-- showcase -->
+	{% assign section-title = site.data.navigation.navigation-bar[2] %}
+	<section id="#{{ section-title.option }}">
+		<div class="wrapper">
+			<h2>{{ section-title.option | upcase }}</h2>
+		</div>
+		<div class="showcase">
+			<p class="showcase__text">Another way to participate in this event is by volunteering! It’s a great opportunity to meet new people and have fun while also helping the festival activities.</p>
+			<a href="" class="btn btn-info">Learn More</a>
+		</div>
+	</section>
+	<!-- Carousel -->
+	{% assign section-title = site.data.navigation.navigation-bar[3] %}
+	<section id="#{{ section-title.option }}">
+		<div class="panel">
+			<div class="wrapper-carousel">
+				<div class="wrapper">
+					<h2>{{ section-title.option | upcase }}</h2>
+				</div>
+				<div class="card-container">
+					{% for item in site.data.navigation.carousel %}
+						<!-- card -->
+						<div class="card">
+							<img src="{{ item.cover }}" alt="This is a card cover">
+							<div class="card__content">
+								<h2>{{ item.title }}</h2>
+								<p>{{ item.description }}</p>
+								<a href="{{ item.link }}" class="btn btn-info">Learn More</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- {{ content }} -->
 </body>

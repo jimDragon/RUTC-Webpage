@@ -52,6 +52,10 @@ header {
     background-size: cover;
 }
 
+section {
+    margin-bottom: 4rem;
+}
+
 /* Used for element manipulation by media queries */
 .wrapper {
     margin-right: auto;
@@ -101,6 +105,7 @@ header {
 .btn-info {
     background-color: var(--clr-orange);
     box-shadow: 0px 4px 8px rgb(138, 32, 0);
+    margin-top: 1.2rem;
 }
 
 .nav {
@@ -145,7 +150,7 @@ header {
 }
 
 .post-box {
-    margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 1.3rem 0.5rem;
     padding: 4rem 1rem 1rem;
     border-radius: 20px;
     box-shadow: 0px 6px 15px #000;
@@ -218,4 +223,33 @@ header {
 .card__content h2 {
     margin-top: 0.5rem;
     margin-bottom: 0rem;
+}
+
+.card__content p {
+    margin-bottom: 0.2rem;
+}
+
+.showcase::before {
+    background-color: var(--clr-light);
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity : 0.34;
+    z-index: -1;
+}
+
+.showcase {
+    z-index: 0;
+    color: var(--clr-light);
+    background-image: url(/assets/img/3_Volunteers/1_Volunteers.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-bottom: 6rem;
 }
