@@ -249,7 +249,9 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 4.5rem 2rem;
     margin-bottom: 6rem;
 }
