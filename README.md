@@ -1,2 +1,2 @@
 # RUTC-Webpage
-Testing repo for upcoming RUTC Festival webpage
+Countdown page until main page is ready
