@@ -1,0 +1,110 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: var(--fw-semibold);
+    letter-spacing: .09em;
+}
+
+:root {
+    --clr-red: #F84444;
+    --clr-orange: #F76844;
+    --clr-accent: #5F897F;
+    --clr-light: #EEE7CB;
+    --clr-medium: #EEC98F;
+    --clr-dark: #19191B;
+
+    --clr-black: black;
+    --clr-white: white;
+
+    /* --fw-regular: 400; */
+    /* --fw-medium: 500; */
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+body {
+    color: var(--clr-dark);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.125rem;
+}
+
+header {
+    z-index: 0;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn {
+    color: white;
+    padding: .7em 2em;
+    border-radius: 63px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: var(--fw-medium);
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.btn-center {
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--clr-red);
+    box-shadow: 0px 6px 6px #AD2929;
+    animation: move 1s infinite alternate;
+}
+
+.btn-info {
+    background-color: var(--clr-orange);
+    box-shadow: 0px 4px 8px rgb(138, 32, 0);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.7em;
+}
+
+.card {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.4rem 1.3rem 2rem;
+    border-radius: 20px;
+    color: var(--clr-black);
+    background-color: var(--clr-light);
+    box-shadow: 0 8px 6px 2px rgba(0,0,0,0.2);
+}
+
+#countdown {
+    background-color: white;
+    color: var(--clr-orange);
+    padding: 2rem 0.5rem;
+    border-radius: 20px; 
+    margin: 1rem 0 1rem 0;
+}
