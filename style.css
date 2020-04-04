@@ -111,7 +111,6 @@ header {
 }
 
 #countdown {
-	/* margin-top: 0.rem; */
 	display: flex;
 	flex-direction: row;
     color: var(--clr-orange);
@@ -132,7 +131,24 @@ header {
 }
 
 .c-number {
-  font-family: "Montserrat", sans-serif;
   color: var(--clr-dark);
+  font-weight: var(--fw-bold);
   font-size: 1rem;
+}
+
+@media only screen and (min-width: 620px) {
+
+	body {
+		font-size: 0.8rem;
+	}
+
+    .c-number {
+		font-size: 2rem;
+	}
+
+	.days, .hours, .minutes, .seconds, .left, .text {
+		margin: 0.2rem;
+		padding: 1rem;
+		border-radius: 10px;
+	  }
 }
