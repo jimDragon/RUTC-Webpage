@@ -10,43 +10,42 @@
 <body>
     <header>
 		<div class="logo">
-            <img src="rutc_logo.png" alt="festival's logo">
-            <div class="card">
-                <h3 id="countdown"></h3>
-                <a class="btn btn-info" href="https://www.facebook.com/events/601299833787435">Join The Event</a>
-            </div>
+			<img src="rutc_s.png" alt="festival's logo">
+			<div class="card">
+				<h3 class="text">Coming soon!<h3>
+				<h3 id="countdown"></h3>
+			</div>
+			<a class="btn btn-primary" href="https://www.facebook.com/events/601299833787435">Join The Event</a>
 		</div>
     </header>
-
     <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Aug 13, 2020 19:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-            // Get today's date and time
-            var now = new Date().getTime();
-        
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-        
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-            // Display the result in the element with id="countdown"
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-        
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-        </script>
+      const year = new Date().getFullYear();
+      const choosenDate = new Date(year, 7, 6).getTime();
+
+      let countdown = setInterval(function() {
+
+        const today = new Date().getTime();
+
+        const diff = choosenDate - today;
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          "<div class=\"days\"> \
+        <div class=\"c-number\">" + days + "</div>days</div> \
+      <div class=\"hours\"> \
+        <div class=\"c-number\">" + hours + "</div>hours</div> \
+      <div class=\"minutes\"> \
+        <div class=\"c-number\">" + minutes + "</div>minutes</div> \
+      <div class=\"seconds\"> \
+        <div class=\"c-number\">" + seconds + "</div>seconds</div> \
+      <div class=\"left\">LEFT</div>\
+      </div>";
+
+      }, 1000);
+    </script>
 </body>
 </html>
