@@ -39,7 +39,7 @@ header {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 /* Primary btn animation */
@@ -96,7 +96,6 @@ header {
 .logo img {
     max-width: 300px;
 	height: auto;
-	margin-top: -5rem;
 }
 
 .card {
@@ -139,6 +138,35 @@ header {
   font-size: 1rem;
 }
 
+.social {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+.fa:hover {
+	opacity: 1;
+}
+
+.fa-facebook {
+	color: white;
+}
+.fa-youtube-play {
+	color: white;
+}
+
+.fa-instagram {
+	color: white;
+}
+
 @media only screen and (min-width: 620px) {
 
 	body {
@@ -153,5 +181,9 @@ header {
 		margin: 0.2rem;
 		padding: 1rem;
 		border-radius: 10px;
-	  }
+	}
+
+	.social {
+		justify-content: flex-start;
+	}
 }
