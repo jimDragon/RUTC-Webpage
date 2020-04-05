@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5 {
     letter-spacing: .15em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 :root {
     --clr-red: #F84444;
     --clr-orange: #F76844;
@@ -162,6 +167,11 @@ section {
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
     background-size: cover;
     transition: all .2s ease-in-out;
+}
+
+.post-box__link {
+    text-decoration: underline;
+    color: var(--clr-dark);
 }
 
 .post-box__date, .post-box__title {

@@ -28,8 +28,10 @@
 				{% for post in site.posts %}
 				<!-- post -->
 				<div class="post-box">
-					<a href="{{ post.url }}"><h3 class="post-box__date">{{ post.date | date_to_string }}</h3></a>
-					<a href="{{ post.url }}"><h3 class="post-box__title">{{ post.title }}</h3></a>
+					<a class="post-box__link" href="{{ post.url }}">
+						<h3 class="post-box__date">{{ post.date | date_to_string }}</h3>
+						<h3 class="post-box__title">{{ post.title }}</h3>
+					</a>
 				</div>
 				{% endfor %}
 				<a class="btn btn-center btn-info" href="">Learn More</a>
