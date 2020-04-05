@@ -58,14 +58,14 @@ header {
 }
 
 section {
-    margin-bottom: 4rem;
+    margin-bottom: 20%;
 }
 
 /* Used for element manipulation by media queries */
 .wrapper {
     margin-right: auto;
     margin-left:  auto;
-    max-width: 285px;
+    max-width: 90%;
 }
 
 .wrapper-carousel {
@@ -78,7 +78,6 @@ section {
     display: flex;
     flex-direction: column;
 }
-
 
 .btn {
     color: white;
@@ -155,8 +154,11 @@ section {
 }
 
 .post-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     margin: 0.5rem 0.5rem 1.3rem 0.5rem;
-    padding: 4rem 1rem 1rem;
+    padding: 2rem;
     border-radius: 20px;
     box-shadow: 0px 6px 15px #000;
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, var(--clr-light) 100%), url(/assets/img/2_Events/3_Workshop.jpg) center;
@@ -166,7 +168,7 @@ section {
     /* background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
     background-size: cover;
-    transition: all .2s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 .post-box__link {
@@ -186,18 +188,20 @@ section {
 }
 
 .post-box:hover {
-    transform: scale(1.02);
+    filter: brightness(1.2);
+    transform: scale(1.016);
 }
 
 .panel {
     margin-top: 3rem;
+    padding: 4% 0 8% 0;
     background-color: var(--clr-accent);
     transform: skewY(-2.8deg);
     box-shadow: 0px 4px 4px rgb(0.2, 0, 0);
 }
 
 .card-container {
-    padding: 0.6rem 1rem 2rem 2rem;
+    padding: 0.6rem 1rem 1.3rem 2rem;
     display: flex;
     overflow-x: auto;
 }
@@ -206,7 +210,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 0 0 90%;
+    flex: 0 0 15rem;
     margin-right: 2rem;
     border-radius: 20px;
     color: var(--clr-black);
@@ -261,5 +265,178 @@ section {
     position: relative;
     text-align: center;
     padding: 5rem 2rem;
-    margin-bottom: 6rem;
+    margin-bottom: 28%;
+}
+
+.blob {
+    margin-bottom: 1.4rem;
+    padding: 2.8rem;
+    text-align: center;
+    border-radius: 20px;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, var(--clr-light) 150%), url(/assets/img/1_Landing/Landing_2) center;
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(/assets/img/2_Events/3_Workshop.jpg) no-repeat; */
+    background-size: cover;
+    box-shadow: 0 8px 6px 2px rgba(0,0,0,0.2);
+    transition: all .1s ease-in-out;
+}
+
+.blob__link {
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.blob:hover {
+    filter: brightness(1.2);
+    transform: scale(1.01);
+}
+
+@media only screen and (min-width: 374px) {
+    
+    .card {
+        flex: 0 0 18rem;
+    }
+}
+
+/* iphone 6/7/8 plus */
+@media only screen and (min-width: 539px) {
+
+    section {
+        margin-bottom: 13%;
+    }
+    
+    .btn-center {
+        grid-column: 2 ;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container-feed {
+        display: grid;
+        grid-template-columns: [col1] 33.3% [col2] 33.3% [col3] 33.3%;
+    }
+
+    .post-box {
+        padding-top: 7rem;
+    }
+
+    .panel {
+        padding: 2% 0 5% 0;
+    }
+
+    .card-container {
+        padding: 0.6rem 1rem 1.3rem 8%;
+    }
+
+    .showcase {
+        padding: 9rem 2rem;
+        margin-bottom: 18%;
+    }
+
+
+    .blob {
+        margin: 0 1.5% 0 1.5%;
+        padding: 10% 15%;
+    }
+}
+
+/* ipad */
+@media only screen and (min-width: 699px) {
+
+    .showcase::before {
+        left: 50%;
+        width: 50%;
+    }
+    
+    .showcase {
+        padding: 5rem 5% 5rem 55%;
+    }
+}
+
+@media only screen and (min-width: 899px) {
+
+    section {
+        margin-bottom: 5rem;
+    }
+
+    .wrapper-carousel {
+        transform: skewY(1.2deg);
+    }
+
+    .container-blob {
+        justify-content: space-evenly;
+    }
+
+    .post-box {
+        padding-top: 12rem;
+    }
+
+    .panel {
+        padding: 2% 0 4% 0;
+        transform: skewY(-1.2deg);
+    }
+    
+    .card {
+        flex: 0 0 21rem;
+    }
+
+    .showcase {
+        margin-bottom: 8rem;
+    }
+    
+    .blob {
+        margin-top: 1rem;
+        padding: 8% 18%;
+    }
+
+}
+
+/* MDPI Laptop */
+@media only screen and (min-width: 1199px) {
+    
+    .panel {
+        padding: 1% 0 3% 0;
+        transform: skewY(-1.2deg);
+    }
+}
+
+@media only screen and (min-width: 1399px ) {
+
+    .wrapper {
+       max-width: 1150px;
+    }
+
+    .card-container {
+        padding: 0.6rem 1rem 1.3rem 15%;
+    }
+
+    .showcase::before {
+        left: 60%;
+        width: 40%;
+    }
+    
+    .showcase {
+        padding: 5rem 5% 5rem 65%;
+    }
+}
+
+@media only screen and (min-width: 1699px ) {
+
+    .card-container {
+        padding: 0.6rem 1rem 1.3rem 20%;
+    }
+}
+
+@media only screen and (min-width: 1898px ) {
+
+    .card-container {
+        padding: 0.6rem 1rem 1.3rem 25%;
+    }
 }

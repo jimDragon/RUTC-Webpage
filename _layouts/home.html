@@ -9,22 +9,25 @@
 </head>
 <body>
 	<header>
+
 		<!-- Navigation bar -->
 		<nav class="nav">
 			{% include navigation-bar.html %}
 		</nav>
+
 		<!-- RUTC Logo -->
 		<div class="logo">
 			<img src="assets/img/Icons/rutc_logo.png" alt="festival's logo">
 			<a class="btn btn-primary" href="">Join The Event</a>
 		</div>
 	</header>
+
 	<!-- Feed -->
 	{% assign section-title = site.data.navigation.navigation-bar[0] %}
 	<section id="#{{ section-title.option }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
-			<div class="container">
+			<div class="container container-feed">
 				{% for post in site.posts %}
 				<!-- post -->
 				<div class="post-box">
@@ -38,6 +41,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- Carousel -->
 	{% assign section-title = site.data.navigation.navigation-bar[1] %}
 	<section id="#{{ section-title.option }}">
@@ -73,6 +77,7 @@
 			<a href="" class="btn btn-info">Learn More</a>
 		</div>
 	</section>
+
 	<!-- Carousel -->
 	{% assign section-title = site.data.navigation.navigation-bar[3] %}
 	<section id="#{{ section-title.option }}">
@@ -98,6 +103,20 @@
 		</div>
 	</section>
 
-	<!-- {{ content }} -->
-</body>
+	<!-- Media -->
+	{% assign section-title = site.data.navigation.navigation-bar[4] %}
+	<section id="#{{ section-title.option }}">
+		<div class="wrapper">
+			<h2>{{ section-title.option | upcase }}</h2>
+			<div class="container container-blob">
+				<div class="blob"><a class="blob__link" href=""><h2>Photos</h2></a></div>
+				<div class="blob"><a class="blob__link" href=""><h2>Videos</h2></a></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="/assets/js/mechanism.js"></script>
+	{{ content }} -->
+	</body>
 </html>
