@@ -1,3 +1,4 @@
+/* Setting up */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -79,6 +80,7 @@ section {
     flex-direction: column;
 }
 
+/* Buttons */
 .btn {
     color: white;
     padding: .7em 2em;
@@ -112,31 +114,59 @@ section {
     margin-top: 1.2rem;
 }
 
-.nav {
+/* Navigation bar */
+.hide-mobile {
+    display: none;
+}
+
+.menu {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    /* width: 50px; */
+    padding: 30px 30px 0 30px;
 }
 
 .nav__list {
     margin: 0;
     padding: 0;
-    display: flex;
-    list-style: none;
-    /* font-size: 1.25rem; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    text-align: left;
+    background-color: var(--clr-dark);
+    padding-top: 2em;
+    z-index: 5;
 }
 
 .nav__link {
-    padding: 0.7em 1.4em 0.7em 1.4em;
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    color: var(--clr-medium);
     text-decoration: none;
-    color: inherit;
-    display: flex;
 }
 
 .nav__link:hover {
-    color: var(--clr-dark);
     background-color: var(--clr-medium);
+    color: var(--clr-dark);
+    width: auto;
 }
 
+.exit-btn {
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    text-emphasis: right;
+}
+
+.exit-btn img{
+    width: 35px;
+    cursor: pointer;
+}
+
+
+/* Logo */
 .logo {
     margin: .5rem;
     display: flex;
@@ -153,6 +183,8 @@ section {
     margin-bottom: 1.7em;
 }
 
+
+/* Posts */
 .post-box {
     display: flex;
     flex-direction: column;
@@ -192,6 +224,7 @@ section {
     transform: scale(1.016);
 }
 
+/* Carousel */
 .panel {
     margin-top: 3rem;
     padding: 4% 0 8% 0;
@@ -243,6 +276,7 @@ section {
     margin-bottom: 0.2rem;
 }
 
+/* Showcase */
 .showcase::before {
     background-color: var(--clr-light);
     content : "";
@@ -268,6 +302,7 @@ section {
     margin-bottom: 28%;
 }
 
+/* Media blobs */
 .blob {
     margin-bottom: 1.4rem;
     padding: 2.8rem;
@@ -295,6 +330,8 @@ section {
     transform: scale(1.01);
 }
 
+
+/* Adjusting cards */
 @media only screen and (min-width: 374px) {
     
     .card {
@@ -396,6 +433,34 @@ section {
         padding: 8% 18%;
     }
 
+}
+
+/* Show navigation bar */
+@media only screen and (min-width: 1024px) {
+
+    .show-desktop {
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .nav__list {
+        padding-top: 0;
+        margin: 0;
+        position: static;
+        width: auto;
+        background: none;
+        text-align: center;
+        list-style: none;
+    }
+    
+    .nav__list-item {
+        display: inline-block;
+    }
+    
 }
 
 /* MDPI Laptop */

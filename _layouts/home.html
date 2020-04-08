@@ -12,7 +12,16 @@
 
 		<!-- Navigation bar -->
 		<nav class="nav">
-			{% include navigation-bar.html %}
+			<a href="#" class="hide-desktop">
+				<img class="menu" id="menu" src="/assets/img/Icons/Hamburger.svg" alt="Toggle menu">
+			</a>
+
+			<ul class="nav__list show-desktop hide-mobile" id="nav">
+				<li id="exit" class="exit-btn hide-desktop"><img src="/assets/img/Icons/Exit.svg" alt="Exit menu"></li>
+				{% for item in site.data.navigation.navigation-bar %}
+					<li class="nav__list-item"><a class="nav__link" href="#{{ item.option }}">{{ item.option | upcase }}</a></li>
+				{% endfor %}
+			</ul>
 		</nav>
 
 		<!-- RUTC Logo -->
@@ -66,7 +75,8 @@
 			</div>
 		</div>
 	</section>
-	<!-- showcase -->
+
+  <!-- showcase -->
 	{% assign section-title = site.data.navigation.navigation-bar[2] %}
 	<section id="#{{ section-title.option }}">
 		<div class="wrapper">
@@ -114,6 +124,8 @@
 			</div>
 		</div>
 	</section>
+  
+  <script src="/assets/js/menu.js"></script>
 
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/assets/js/mechanism.js"></script>
