@@ -1,4 +1,4 @@
-# RUTC-Webpage
+# RUTC-Webpage [wip]
 Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
 ## Site Structure
@@ -37,11 +37,14 @@ Home Page ~> [home]
  └── Social Media / Contact
 ```
 
-## Layout inheritance
+## Layout inheritance and description
 ```
-- home
+- home ~> includes [(Splash, Feed), Carousel, Showcase, Carousel, Media, Contact]
+- post
 - list
    ├── archive-list 
    └── post-list
 - info
 ```
+### Home layout
+The home layout will contain the "Splash" and the "Feed" includes by default but it can support more. The point of the home layout is to be a scrolling page. This means that every option on the navigation bar can also be accessed by scrolling to the corresponding heading.

@@ -1,0 +1,16 @@
+navigation-bar:
+  - option: "news"
+  - option: "events"
+  - option: "volunteers"
+  - option: "explore"
+  - option: "media"
+  - option: "contact"
+carousel:
+  - title: "Festivals"
+    description: "The big day that everyone is waiting for. Here you have the oportunity to see and appreciate big artists and local bands."
+    cover: "/assets/img/1_Landing/Landing_3"
+    link: "index.html"
+  - title: "Street Events"
+    description: "Getting in the mood by performing at the street events that happen in random spots on the city."
+    cover: "/assets/img/2_Events/2_Street.jpg"
+    link: "index.html"
