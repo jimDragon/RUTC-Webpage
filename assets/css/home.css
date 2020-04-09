@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: var(--fw-semibold);
     letter-spacing: .15em;
@@ -42,13 +46,13 @@ a {
 
 /* Global classes */
 body {
+    scroll-behavior: smooth;
     padding: 0;
     margin: 0;
     background-color: var(--clr-dark);
     font-family: 'Quicksand', sans-serif;
     font-size: 1.125rem;
     color: var(--clr-medium);
-    /* line-height: 1.38;   TODO: Check if this is necessary */ 
 }
 
 header {
@@ -112,6 +116,26 @@ section {
     background-color: var(--clr-orange);
     box-shadow: 0px 4px 8px rgb(138, 32, 0);
     margin-top: 1.2rem;
+}
+
+.btn-top {
+    display: none;
+    position: fixed;
+    width: 64px;
+    padding: 15px;
+    bottom: 1em;
+    right: 1em;
+    border: none;
+    outline: none;
+    background-color: var(--clr-medium);
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 8px 4px 1px rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.btn-top img {
+    width: 100%
 }
 
 /* Navigation bar */

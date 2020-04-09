@@ -8,16 +8,16 @@
 	<title>{{ page.title }}</title>
 </head>
 <body>
-	<header>
+  <header>
 
 		<!-- Navigation bar -->
 		<nav class="nav">
 			<a href="#" class="hide-desktop">
-				<img class="menu" id="menu" src="/assets/img/Icons/Hamburger.svg" alt="Toggle menu">
+				<img class="menu" id="menu" src="/assets/img/icons/ham_menu.svg" alt="Toggle menu">
 			</a>
 
 			<ul class="nav__list show-desktop hide-mobile" id="nav">
-				<li id="exit" class="exit-btn hide-desktop"><img src="/assets/img/Icons/Exit.svg" alt="Exit menu"></li>
+				<li id="exit" class="exit-btn hide-desktop"><img src="/assets/img/icons/exit.svg" alt="Exit menu"></li>
 				{% for item in site.data.navigation.navigation-bar %}
 					<li class="nav__list-item"><a class="nav__link" href="#{{ item.option }}">{{ item.option | upcase }}</a></li>
 				{% endfor %}
@@ -26,14 +26,19 @@
 
 		<!-- RUTC Logo -->
 		<div class="logo">
-			<img src="assets/img/Icons/rutc_logo.png" alt="festival's logo">
+			<img src="assets/img/icons/rutc_logo.png" alt="festival's logo">
 			<a class="btn btn-primary" href="">Join The Event</a>
 		</div>
 	</header>
 
+	<!-- Back to top -->
+	<button id="top-scroll" class="btn btn-top" title="Go to top">
+		<img src="/assets/img/icons/top.svg">
+	</button>
+
 	<!-- Feed -->
 	{% assign section-title = site.data.navigation.navigation-bar[0] %}
-	<section id="#{{ section-title.option }}">
+	<section id="{{ section-title.option }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 			<div class="container container-feed">
@@ -53,7 +58,7 @@
 
 	<!-- Carousel -->
 	{% assign section-title = site.data.navigation.navigation-bar[1] %}
-	<section id="#{{ section-title.option }}">
+	<section id="{{ section-title.option }}">
 		<div class="panel">
 			<div class="wrapper-carousel">
 				<div class="wrapper">
@@ -78,7 +83,7 @@
 
   <!-- showcase -->
 	{% assign section-title = site.data.navigation.navigation-bar[2] %}
-	<section id="#{{ section-title.option }}">
+	<section id="{{ section-title.option }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 		</div>
@@ -90,7 +95,7 @@
 
 	<!-- Carousel -->
 	{% assign section-title = site.data.navigation.navigation-bar[3] %}
-	<section id="#{{ section-title.option }}">
+	<section id="{{ section-title.option }}">
 		<div class="panel">
 			<div class="wrapper-carousel">
 				<div class="wrapper">
@@ -115,7 +120,7 @@
 
 	<!-- Media -->
 	{% assign section-title = site.data.navigation.navigation-bar[4] %}
-	<section id="#{{ section-title.option }}">
+	<section id="{{ section-title.option }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 			<div class="container container-blob">
@@ -124,11 +129,9 @@
 			</div>
 		</div>
 	</section>
-  
-  <script src="/assets/js/menu.js"></script>
-
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/assets/js/mechanism.js"></script>
-	{{ content }} -->
+ 
+  <!-- Page specific js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/assets/js/modules.js"></script>
 	</body>
 </html>
