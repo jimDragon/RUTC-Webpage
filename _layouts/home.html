@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/assets/css/home.css">
+	<link href="assets/css/home.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="/assets/css/home.css"> -->
 	<title>{{ page.title }}</title>
 </head>
 <body>
@@ -13,11 +14,11 @@
 		<!-- Navigation bar -->
 		<nav class="nav">
 			<a href="#" class="hide-desktop">
-				<img class="menu" id="menu" src="/assets/img/icons/ham_menu.svg" alt="Toggle menu">
+				<img class="menu" id="menu" src="assets/img/icons/ham_menu.svg" alt="Toggle menu">
 			</a>
 
 			<ul class="nav__list show-desktop hide-mobile" id="nav">
-				<li id="exit" class="exit-btn hide-desktop"><img src="/assets/img/icons/exit.svg" alt="Exit menu"></li>
+				<li id="exit" class="exit-btn hide-desktop"><img src="assets/img/icons/exit.svg" alt="Exit menu"></li>
 				{% for item in site.data.navigation.navigation-bar %}
 					<li class="nav__list-item"><a class="nav__link" href="#{{ item.option }}">{{ item.option | upcase }}</a></li>
 				{% endfor %}
@@ -33,7 +34,7 @@
 
 	<!-- Back to top -->
 	<button id="top-scroll" class="btn btn-top" title="Go to top">
-		<img src="/assets/img/icons/top.svg">
+		<img src="assets/img/icons/top.svg">
 	</button>
 
 	<!-- Feed -->
@@ -132,6 +133,6 @@
  
   <!-- Page specific js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/assets/js/modules.js"></script>
+  <script src="assets/js/modules.js"></script>
 	</body>
 </html>
