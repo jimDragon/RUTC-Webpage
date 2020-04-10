@@ -39,12 +39,11 @@ Home Page ~> [home]
 
 ## Layout inheritance and description
 ```
-- home ~> includes [(Splash, Feed), Carousel, Showcase, Carousel, Media, Contact]
-- post
-- list
-   ├── archive-list 
-   └── post-list
-- info
+- home ~> includes [(Splash, Feed), Carousel, Showcase, Carousel, Media, Contact*] *WIP
+- default
+   ├── post
+   ├── info
+   └── list
 ```
 ### Home layout
-The home layout will contain the "Splash" and the "Feed" includes by default but it can support more. The point of the home layout is to be a scrolling page. This means that every option on the navigation bar can also be accessed by scrolling to the corresponding heading.
+The home layout will contain the "Splash" and the "Feed" includes by default but it can support more. The point of the home layout is to be a scrolling page. This means that every option on the navigation bar can also be accessed by scrolling to the corresponding heading (except if it's too much content).
