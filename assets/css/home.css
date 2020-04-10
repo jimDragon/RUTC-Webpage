@@ -3,10 +3,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 h1, h2, h3, h4, h5 {
     font-weight: var(--fw-semibold);
     letter-spacing: .15em;
@@ -57,7 +53,7 @@ body {
 
 header {
     height: 100vh;
-    background-image: url(/assets/img/1_Landing/Landing_2);
+    background-image: url(../img/1_Landing/Landing_2);
     background-position: center;
     background-size: cover;
 }
