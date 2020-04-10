@@ -52,7 +52,13 @@ $(document).ready(function(){
         }
     });
     $('#top-scroll').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
+        $("html, body").animate({
+            scrollTop: 0 
+        }, 600, function() {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.history.pushState({}, document.title, "/");
+    });
         return false;
     });
 });
