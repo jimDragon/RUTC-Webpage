@@ -1,3 +1,5 @@
+// This js file is responsible for hamburger menu, scroll navigation and top scroll button
+
 var menu = document.getElementById('menu');
 var nav = document.getElementById('nav');
 var exit = document.getElementById('exit');

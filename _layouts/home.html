@@ -5,25 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
 	<link href="assets/css/home.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="/assets/css/home.css"> -->
 	<title>{{ page.title }}</title>
 </head>
 <body>
   <header>
 
 		<!-- Navigation bar -->
-		<nav class="nav">
-			<a href="#" class="hide-desktop">
-				<img class="menu" id="menu" src="assets/img/icons/ham_menu.svg" alt="Toggle menu">
-			</a>
-
-			<ul class="nav__list show-desktop hide-mobile" id="nav">
-				<li id="exit" class="exit-btn hide-desktop"><img src="assets/img/icons/exit.svg" alt="Exit menu"></li>
-				{% for item in site.data.navigation.navigation-bar %}
-					<li class="nav__list-item"><a class="nav__link" href="#{{ item.option }}">{{ item.option | upcase }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
+		{% include navigation-bar.html %}
 
 		<!-- RUTC Logo -->
 		<div class="logo">
@@ -38,8 +26,8 @@
 	</button>
 
 	<!-- Feed -->
-	{% assign section-title = site.data.navigation.navigation-bar[0] %}
-	<section id="{{ section-title.option }}">
+	{% assign section-title = site.data.navigation[0] %}
+	<section id="{{ section-title.option | downcase }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 			<div class="container container-feed">
@@ -58,24 +46,23 @@
 	</section>
 
 	<!-- Carousel -->
-	{% assign section-title = site.data.navigation.navigation-bar[1] %}
-	<section id="{{ section-title.option }}">
+	{% assign section-title = site.data.navigation[1] %}
+	<section id="{{ section-title.option | downcase }}">
 		<div class="panel">
 			<div class="wrapper-carousel">
 				<div class="wrapper">
 					<h2>{{ section-title.option | upcase }}</h2>
 				</div>
 				<div class="card-container">
-					{% for item in site.data.navigation.carousel %}
-						<!-- card -->
-						<div class="card">
-							<img src="{{ item.cover }}" alt="This is a card cover">
-							<div class="card__content">
-								<h2>{{ item.title }}</h2>
-								<p>{{ item.description }}</p>
-								<a href="{{ item.link }}" class="btn btn-info">Learn More</a>
-							</div>
-						</div>
+					{% for item in site.pages %}
+						{% if item.card_category == section-title.option %}
+							{% include card.html 
+								cover=item.card_cover 
+								title=item.card_title 
+								description=item.card_description 
+								btn_text="Learn More" 
+							%}
+						{% endif%}
 					{% endfor %}
 				</div>
 			</div>
@@ -83,8 +70,8 @@
 	</section>
 
   <!-- showcase -->
-	{% assign section-title = site.data.navigation.navigation-bar[2] %}
-	<section id="{{ section-title.option }}">
+	{% assign section-title = site.data.navigation[2] %}
+	<section id="{{ section-title.option | downcase }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 		</div>
@@ -95,8 +82,8 @@
 	</section>
 
 	<!-- Carousel -->
-	{% assign section-title = site.data.navigation.navigation-bar[3] %}
-	<section id="{{ section-title.option }}">
+	{% assign section-title = site.data.navigation[3] %}
+	<section id="{{ section-title.option | downcase }}">
 		<div class="panel">
 			<div class="wrapper-carousel">
 				<div class="wrapper">
@@ -120,8 +107,8 @@
 	</section>
 
 	<!-- Media -->
-	{% assign section-title = site.data.navigation.navigation-bar[4] %}
-	<section id="{{ section-title.option }}">
+	{% assign section-title = site.data.navigation[4] %}
+	<section id="{{ section-title.option | downcase }}">
 		<div class="wrapper">
 			<h2>{{ section-title.option | upcase }}</h2>
 			<div class="container container-blob">
@@ -130,7 +117,7 @@
 			</div>
 		</div>
 	</section>
- 
+
   <!-- Page specific js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="assets/js/modules.js"></script>
