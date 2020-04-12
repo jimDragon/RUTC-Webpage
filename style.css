@@ -28,7 +28,7 @@ body {
     color: var(--clr-dark);
     font-family: 'Quicksand', sans-serif;
 	font-size: 0.6rem;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 header {
