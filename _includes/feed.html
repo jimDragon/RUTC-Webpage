@@ -1,0 +1,20 @@
+<!-- Position parameter means which option in the navigation.yml is going to be used/represented. -->
+
+{% assign section-title = site.data.navigation[include.position] %}
+<section id="{{ section-title.option | downcase }}">
+    <div class="wrapper">
+        <h2>{{ section-title.option | upcase }}</h2>
+        <div class="container container-feed">
+            {% for post in site.posts %}
+            <!-- post -->
+            <div class="post-box">
+                <a class="post-box__link" href="{{ post.url }}">
+                    <h3 class="post-box__date">{{ post.date | date_to_string }}</h3>
+                    <h3 class="post-box__title">{{ post.title }}</h3>
+                </a>
+            </div>
+            {% endfor %}
+            <a class="btn btn-center btn-info" href="">{{ include.btn_text }}</a>
+        </div>
+    </div>
+</section>

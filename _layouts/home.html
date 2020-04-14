@@ -26,97 +26,10 @@
 	</button>
 
 	<!-- Feed -->
-	{% assign section-title = site.data.navigation[0] %}
-	<section id="{{ section-title.option | downcase }}">
-		<div class="wrapper">
-			<h2>{{ section-title.option | upcase }}</h2>
-			<div class="container container-feed">
-				{% for post in site.posts %}
-				<!-- post -->
-				<div class="post-box">
-					<a class="post-box__link" href="{{ post.url }}">
-						<h3 class="post-box__date">{{ post.date | date_to_string }}</h3>
-						<h3 class="post-box__title">{{ post.title }}</h3>
-					</a>
-				</div>
-				{% endfor %}
-				<a class="btn btn-center btn-info" href="">Learn More</a>
-			</div>
-		</div>
-	</section>
+	{% include feed.html position=0 btn_text="Learn More" %}
 
-	<!-- Carousel -->
-	{% assign section-title = site.data.navigation[1] %}
-	<section id="{{ section-title.option | downcase }}">
-		<div class="panel">
-			<div class="wrapper-carousel">
-				<div class="wrapper">
-					<h2>{{ section-title.option | upcase }}</h2>
-				</div>
-				<div class="card-container">
-					{% for item in site.pages %}
-						{% if item.card_category == section-title.option %}
-							{% include card.html 
-								cover=item.card_cover 
-								title=item.card_title 
-								description=item.card_description 
-								btn_text="Learn More" 
-							%}
-						{% endif%}
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</section>
-
-  <!-- showcase -->
-	{% assign section-title = site.data.navigation[2] %}
-	<section id="{{ section-title.option | downcase }}">
-		<div class="wrapper">
-			<h2>{{ section-title.option | upcase }}</h2>
-		</div>
-		<div class="showcase">
-			<p class="showcase__text">Another way to participate in this event is by volunteering! It’s a great opportunity to meet new people and have fun while also helping the festival activities.</p>
-			<a href="" class="btn btn-info">Learn More</a>
-		</div>
-	</section>
-
-	<!-- Carousel -->
-	{% assign section-title = site.data.navigation[3] %}
-	<section id="{{ section-title.option | downcase }}">
-		<div class="panel">
-			<div class="wrapper-carousel">
-				<div class="wrapper">
-					<h2>{{ section-title.option | upcase }}</h2>
-				</div>
-				<div class="card-container">
-					{% for item in site.data.navigation.carousel %}
-						<!-- card -->
-						<div class="card">
-							<img src="{{ item.cover }}" alt="This is a card cover">
-							<div class="card__content">
-								<h2>{{ item.title }}</h2>
-								<p>{{ item.description }}</p>
-								<a href="{{ item.link }}" class="btn btn-info">Learn More</a>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Media -->
-	{% assign section-title = site.data.navigation[4] %}
-	<section id="{{ section-title.option | downcase }}">
-		<div class="wrapper">
-			<h2>{{ section-title.option | upcase }}</h2>
-			<div class="container container-blob">
-				<div class="blob"><a class="blob__link" href=""><h2>Photos</h2></a></div>
-				<div class="blob"><a class="blob__link" href=""><h2>Videos</h2></a></div>
-			</div>
-		</div>
-	</section>
+	{{ content }}
+	
 
   <!-- Page specific js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,0 +1,24 @@
+<!-- Position parameter means which option in the navigation.yml is going to be used/represented. -->
+
+{% assign section-title = site.data.navigation[include.position] %}
+<section id="{{ section-title.option | downcase }}">
+    <div class="panel">
+        <div class="wrapper-carousel">
+            <div class="wrapper">
+                <h2>{{ section-title.option | upcase }}</h2>
+            </div>
+            <div class="card-container">
+                {% for item in site.pages %}
+                    {% if item.card_category == section-title.option %}
+                        {% include card.html 
+                            cover=item.card_cover 
+                            title=item.card_title 
+                            description=item.card_description 
+                            btn_text="Learn More" 
+                        %}
+                    {% endif%}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
