@@ -43,7 +43,8 @@ Home Page ~> [home]
 - default ~> styles [default.css]
    ├── post ~> styles [default.css]
    ├── info ~> styles [default.css]
-   └── list ~> styles [default.css]
+   ├── list ~> styles [default.css]
+   └── 404 ~> styles [default.css]
 ```
 *WIP
 
