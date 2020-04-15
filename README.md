@@ -55,3 +55,26 @@ The point of the home layout is to be a scrolling page. This means that every op
 ## CSS structure
 ```
 ```
+
+## Includes
+### carousel.html
+```
+- Include parameters:
+      position: Which item in the navigation.yml (in this case) is going to be used/represented.
+```
+The `carousel.html` include is a wrapper for the `card.html` include.
+
+### card.html
+
+```
+- Include parameters:
+      cover: Cover image of a card.
+      title: Title of the card.
+      desscription: Description of a card.
+      url: Url of the page that the user will be redirected to.
+```
+
+*The title of the section that a card is being displayed should match with the `card_category` because that's
+how the placement of the card is being determined, otherwise it will not work*
+
+The `card.html` include is used for displaying cards in the `carousel.html` include. Each card represents a page that you can navigate to (only from the card). It is also automatically generated from the frontmatter variables of the page you want to redirect to. These are: [card_category, card_cover, card_title, card_description ]
