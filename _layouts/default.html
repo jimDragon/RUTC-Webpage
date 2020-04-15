@@ -8,6 +8,29 @@
 	<title>{{ page.title }}</title>
 </head>
 <body>
-    {{ content }}
+
+	<!-- Main  -->
+	{% assign page-title = page.title %}
+	<section id="{{ page-title | downcase }}">
+		<div class="cover-img">
+			<div class="page-title">
+				<h2>{{ page-title | upcase }}</h2>
+			</div>
+			<div class="wrapper">
+				<!-- {{ content }} -->
+				<h3>Why Volunteer?</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum purus sit amet est lobortis, tincidunt mattis nunc aliquam. Suspendisse suscipit, justo sit amet rutrum egestas, magna sem accumsan erat, ac elementum odio orci vitae ante. Mauris massa eros, interdum scelerisque ornare at, placerat et ipsum. Nunc id nisl at ligula facilisis gravida quis sit amet enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque ac lorem id mi hendrerit feugiat eget eu ipsum. Cras ut porta orci. Praesent ut lectus faucibus, volutpat magna sed, lacinia ante. Nulla nec blandit massa.</p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Footer  -->
+	<div class="footer">
+		<div class="footer__content">
+			<p>So if you are ready, you can join our team from here:</p>
+        	<a href="" class="btn btn-info">Volunteer</a>
+		</div>
+	</div>
+	<div class="hide-corners"></div>
 </body>
 </html>
