@@ -1,12 +1,9 @@
-<!-- The title of the section must be the same title with the card_category because that's
-how the placement of the card is determined -->
-
 <!-- card -->                                                                                                                     
 <div class="card">                                                                                                                
     <img src="{{ include.cover }}" alt="Card's cover">
     <div class="card__content">
         <h2>{{ include.title }}</h2>
         <p>{{ include.description }}</p>
-        <a href="" class="btn btn-info">{{ include.btn_text }} </a>
+        <a href="{{ include.url | relative_url }}" class="btn btn-info">{{ include.btn_text }} </a>
     </div>
 </div> 

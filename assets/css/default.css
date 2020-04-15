@@ -133,19 +133,19 @@ section {
 .footer {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-    transform: skewY(2.8deg);
 }
 
 .footer__content{
-    padding: 2rem 2rem 1rem;
+    padding: 4rem 2rem 3rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: skewY(-2.8deg);
+    text-align: center;
 }
 
 .hide-corners {
-    margin-top: -1.5rem;
-    background-color: var(--clr-light);
-    padding: 2.2rem;
+    transform: skewY(2.8deg);
+    background-color: var(--clr-dark);
+    padding: 1rem;
+    margin-bottom: -3%;
 }

@@ -1,12 +1,12 @@
 <!-- Position parameter means which option in the navigation.yml is going to be used/represented. -->
 
-{% assign section-title = site.data.navigation[include.position] %}
-<section id="{{ section-title.option | downcase }}">
+{% assign item = site.data.navigation[include.position] %}
+<section id="{{ item.option | downcase }}">
     <div class="wrapper">
-        <h2>{{ section-title.option | upcase }}</h2>
+        <h2>{{ item.option | upcase }}</h2>
     </div>
     <div class="showcase">
         <p class="showcase__text">{{ include.text }}</p>
-        <a href="{{ include.url | relative_url }}" class="btn btn-info">{{ include.btn_text }}</a>
+        <a href="{{ item.link | relative_url }}" class="btn btn-info">{{ include.btn_text }}</a>
     </div>
 </section>

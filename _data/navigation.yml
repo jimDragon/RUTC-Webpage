@@ -1,8 +1,14 @@
 # Options should be in lowercase letters
 
 - option: "news"
+  link: "#"
 - option: "events"
+  link: "#"
 - option: "volunteers"
+  link: /volunteers.html
 - option: "explore"
+  link: "#"
 - option: "media"
+  link: "#"
 - option: "contact"
+  link: /contact.html

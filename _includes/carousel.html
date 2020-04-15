@@ -1,5 +1,3 @@
-<!-- Position parameter means which option in the navigation.yml is going to be used/represented. -->
-
 {% assign section-title = site.data.navigation[include.position] %}
 <section id="{{ section-title.option | downcase }}">
     <div class="panel">
@@ -11,6 +9,7 @@
                 {% for item in site.pages %}
                     {% if item.card_category == section-title.option %}
                         {% include card.html 
+                            url=item.url
                             cover=item.card_cover 
                             title=item.card_title 
                             description=item.card_description 
