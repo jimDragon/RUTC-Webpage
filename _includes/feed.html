@@ -5,7 +5,7 @@
     <div class="wrapper">
         <h2>{{ section-title.option | upcase }}</h2>
         <div class="container container-feed">
-            {% for post in site.posts %}
+            {% for post in site.posts  limit:3 %}
             <!-- post -->
             <div class="post-box">
                 <a class="post-box__link" href="{{ post.url }}">
