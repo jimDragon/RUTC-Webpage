@@ -49,7 +49,7 @@ body {
 }
 
 section {
-    margin-bottom: 20%;
+    margin-bottom: 50%;
 }
 
 /* Buttons */
@@ -136,7 +136,7 @@ section {
 }
 
 .footer__content{
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 20% 10% 15% 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,4 +148,70 @@ section {
     background-color: var(--clr-dark);
     padding: 1rem;
     margin-bottom: -3%;
+}
+
+/* iphone 6/7/8 plus */
+@media only screen and (min-width: 560px) {
+    
+    .btn-center {
+        grid-column: 2 ;
+    }
+
+    .footer__content{
+        padding: 14% 10% 10% 10%;
+    }
+
+    .hide-corners {
+        padding: 2rem;
+        margin-bottom: -4%;
+    }
+}
+
+@media only screen and (min-width: 899px) {
+
+    section {
+        margin-bottom: 35%;
+    }
+
+    .hide-corners {
+        transform: skewY(1.2deg);
+        padding: 2rem;
+        margin-bottom: -3%;
+    }
+}
+
+/* Show navigation bar */
+@media only screen and (min-width: 1024px) {
+
+    section {
+        margin-bottom: 35%;
+    }
+
+    .footer__content{
+        padding: 10% 10% 8% 10%;
+    }
+}
+
+/* MDPI Laptop */
+@media only screen and (min-width: 1199px) {
+    
+    .footer__content{
+        padding: 8% 10% 6% 10%;
+    }
+}
+
+@media only screen and (min-width: 1300px ) {
+
+    .wrapper {
+       max-width: 1080px;
+    }
+}
+
+@media only screen and (min-width: 1590px ) {
+
+    .hide-corners {
+        transform: skewY(1.2deg);
+        padding: 3rem;
+        margin-bottom: -2%;
+    }
 }

@@ -1,4 +1,6 @@
-<!-- Position parameter means which option in the navigation.yml is going to be used/represented. -->
+<!-- Position parameter means which option in the navigation.yml is going to be used/represented. 
+Automatically obtains the link
+-->
 
 {% assign item = site.data.navigation[include.position] %}
 <section id="{{ item.option | downcase }}">
