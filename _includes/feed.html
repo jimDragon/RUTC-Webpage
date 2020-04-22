@@ -2,9 +2,9 @@
 
 {% assign section-title = site.data.navigation[include.position] %}
 <section id="{{ section-title.option | downcase }}">
-    <div class="wrapper">
+    <div class="wrapper--home">
         <h2>{{ section-title.option | upcase }}</h2>
-        <div class="container container-feed">
+        <div class="container container--feed">
             {% for post in site.posts  limit:3 %}
             <!-- post -->
             <div class="post-box">
@@ -14,7 +14,7 @@
                 </a>
             </div>
             {% endfor %}
-            <a class="btn btn-center btn-info" href="">{{ include.btn_text }}</a>
+            <a class="btn btn--center btn--info" href="">{{ include.btn_text }}</a>
         </div>
     </div>
 </section>

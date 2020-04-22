@@ -1,0 +1,55 @@
+.showcase {
+    z-index: 0;
+    color: map-get($theme-colors, "light");
+    background-image: url(../img/3_Volunteers/1_Volunteers.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-bottom: 28%;
+
+    p {
+        margin-bottom: 2rem;
+    }
+    
+    &::before {
+        background-color: map-get($theme-colors, "light");
+        content : "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity : 0.34;
+        z-index: -1;
+
+        @include breakpoint(screen 699px) {
+            left: 50%;
+            width: 50%;
+        }
+
+        @include breakpoint(screen 1399px) {
+            left: 60%;
+            width: 40%;
+        }
+    }
+    
+    @include breakpoint(screen 539px) {
+        padding: 9rem 2rem;
+        margin-bottom: 18%;
+    }
+
+    @include breakpoint(screen 699px) {
+        padding: 5rem 5% 5rem 55%;
+    }
+
+    @include breakpoint(screen 899px) {
+        margin-bottom: 8rem;
+    }
+
+    @include breakpoint(screen 1399px) {
+        padding: 5rem 5% 5rem 65%;
+    }
+}

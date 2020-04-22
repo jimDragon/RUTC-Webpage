@@ -4,11 +4,11 @@ Automatically obtains the link
 
 {% assign item = site.data.navigation[include.position] %}
 <section id="{{ item.option | downcase }}">
-    <div class="wrapper">
+    <div class="wrapper--home">
         <h2>{{ item.option | upcase }}</h2>
     </div>
     <div class="showcase">
         <p class="showcase__text">{{ include.text }}</p>
-        <a href="{{ item.link | relative_url }}" class="btn btn-info">{{ include.btn_text }}</a>
+        <a href="{{ item.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
     </div>
 </section>

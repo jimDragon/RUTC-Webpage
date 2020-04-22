@@ -59,7 +59,7 @@ $(document).ready(function(){
         }, 600, function() {
 
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.history.pushState({}, document.title, "/");
+        // window.history.pushState({}, document.title, "/");
     });
         return false;
     });

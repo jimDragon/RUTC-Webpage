@@ -1,0 +1,38 @@
+$theme-colors: (
+  "red": #F84444,
+  "orange": #F76844,
+  "accent": #5F897F,
+  "light": #EEE7CB,
+  "medium": #EEC98F,
+  "dark": #19191B,
+  "black": black,
+  "white": white
+);
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700
+);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: map-get($font-weights, "semibold");
+    letter-spacing: .15em;
+    margin: 1em 0 1em 0;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
