@@ -27,18 +27,7 @@ section {
     }
 }
 
-/* Used for applying "responsive" css properties in a group of elements */
-.wrapper--home {
-    margin-right: auto;
-    margin-left:  auto;
-    max-width: 90%;
-
-    @include breakpoint(screen 1399px) {
-        max-width: 1150px;
-    }
-}
-
-/* Used for applying css properties in a group of elements */
+// Used for applying css properties in a group of elements
 .container {
     display: flex;
     flex-direction: column;
