@@ -64,6 +64,16 @@
     }
 }
 
-
-
-
+.btn-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: map-get($theme-colors, "orange");
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    width: 5rem;
+    height: 5rem;
+    padding: 0.7rem;
+    font-weight: map-get($font-weights, "semibold");
+    font-size: 1.5rem;
+    cursor: pointer;
+}

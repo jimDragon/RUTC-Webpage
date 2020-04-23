@@ -1,37 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
-	<link href="{{ "assets/css/styles.css" | relative_url }}" rel="stylesheet">
-	<title>{{ page.title }}</title>
-</head>
-<body>
-  <header>
-		<!-- Navigation bar -->
-		{% include navigation-bar.html %}
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+		<link href="{{ "assets/css/styles.css" | relative_url }}" rel="stylesheet">
+		<title>{{ page.title }}</title>
+	</head>
+	<body>
+		<header>
+			<!-- Navigation bar -->
+			{% include navigation-bar.html %}
 
-		<!-- RUTC Logo -->
-		<div class="logo">
-			<img src="assets/img/icons/rutc_logo.png" alt="festival's logo">
-			<a class="btn btn--primary" href="">Join The Event</a>
-		</div>
-	</header>
+			<!-- RUTC Logo -->
+			<div class="logo">
+				<img src="assets/img/icons/rutc_logo.png" alt="festival's logo">
+				<a class="btn btn--primary" href="">Join The Event</a>
+			</div>
+		</header>
 
-	<!-- Back to top -->
-	<button id="top-scroll" class="btn btn--top" title="Go to top">
-		<img src="assets/img/icons/top.svg">
-	</button>
+		<!-- Back to top button -->
+		{% include top-scroll.html %}
 
-	<!-- Feed -->
-	{% include feed.html position=0 btn_text="Learn More" %}
+		<!-- Feed -->
+		{% include feed.html position=0 btn_text="Learn More" %}
 
-	<!-- Content -->
-	{{ content }}
+		<!-- Content -->
+		{{ content }}
 
-  <!-- Page specific js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="assets/js/modules.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="{{ "assets/js/modules.js" | relative_url }}"></script>
 	</body>
 </html>

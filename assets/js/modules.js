@@ -1,4 +1,7 @@
-// This js file is responsible for hamburger menu, scroll navigation and top scroll button
+---
+---
+// This js file is responsible for hamburger menu, 
+// scroll navigation, top scroll button and history back button
 
 var menu = document.getElementById('menu');
 var nav = document.getElementById('nav');
@@ -58,9 +61,14 @@ $(document).ready(function(){
             scrollTop: 0 
         }, 600, function() {
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        // window.history.pushState({}, document.title, "/");
+        // Remove hashes from the url bar
+        window.history.pushState({}, document.title, "{{ site.baseurl }}/");
     });
         return false;
     });
 });
+
+// History back button
+function goBack() {
+  window.history.back();
+}

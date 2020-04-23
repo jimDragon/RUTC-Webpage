@@ -1,2 +1,4 @@
-baseusrl: /RUTC-Webpage/
+baseurl: /RUTC-Webpage
 exclude: ['README.md']
+plugins:
+  - jekyll-paginate
