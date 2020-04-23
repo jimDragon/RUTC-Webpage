@@ -40,11 +40,11 @@ Home Page ~> [home]
 
 ## Layout inheritance and descriptions
 ```
-- home
 - default
+   ├── home
    ├── post
    ├── info
-   ├── list
+   |    └── list
    └── 404
 ```
 
