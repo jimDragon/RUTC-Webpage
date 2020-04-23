@@ -1,6 +1,6 @@
 ---
+layout: standard
 title: Volunteers
-layout: default
 footer_text: "So if you are ready, you can join out team from here:"
 footer_btn: Volunteer
 footer_link:

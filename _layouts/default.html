@@ -7,33 +7,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
 		<link href="{{ "assets/css/styles.css" | relative_url }}" rel="stylesheet">
+		
+		<!-- Quality of life metadata -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+		<meta name="theme-color" content="#241a19">
 		<title>{{ page.title }}</title>
 	</head>
 	<body>
 
-		<!-- Main  -->
-		{% assign page-title = page.title %}
-		<section id="{{ page-title | downcase }}">
-			<div class="cover-img">
-				<div class="btn-back"><a onclick="goBack()"><-</a></div>
-				<div class="page-title">
-					<h2>{{ page-title | upcase }}</h2>
-				</div>
-				<div class="wrapper--default">
-					{{ content }}
-				</div>
-			</div>
-		</section>
-		
-		<!-- Footer  -->
-		<div class="hide-corners"></div>
-		<div class="footer">
-			<div class="footer__content">
-				<div>{{ page.footer_text }}</div>
-				<a href="{{ page.footer_link }}" class="btn btn--info btn--center">{{ page.footer_btn }}</a>
-			</div>
-		</div>
+		{{ content }}
 
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="{{ "assets/js/modules.js" | relative_url }}"></script>
 	</body>
 </html>

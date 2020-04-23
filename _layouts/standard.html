@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<!-- Main  -->
+{% assign page-title = page.title %}
+<section id="{{ page-title | downcase }}">
+    <div class="cover-img">
+        <div class="btn-back"><a onclick="goBack()"><-</a></div>
+        <div class="page-title">
+            <h2>{{ page-title | upcase }}</h2>
+        </div>
+        <div class="wrapper--info">
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+<!-- Footer  -->
+{% include footer--standard.html %}

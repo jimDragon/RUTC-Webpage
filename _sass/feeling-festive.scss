@@ -1,9 +1,9 @@
-// Setting up
-@import "partials/setup";
-
 // Mixins and functions
 @import "partials/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);
+
+// Setting up
+@import "partials/setup";
 
 // Core CSS
 @import "partials/global";
@@ -18,6 +18,6 @@
 
 // Layout specific
 @import "partials/navigation";
-@import "partials/footer--default";
-@import "partials/global--default";
+@import "partials/footer--standard";
+@import "partials/global--standard";
 @import "partials/global--home";

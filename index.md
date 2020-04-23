@@ -3,7 +3,7 @@ title: Rock Under The Clock
 layout: home
 ---
 <!-- Carousel -->
-{% include carousel.html position=1 %}
+{% include carousel--card.html position=1 %}
 
 
 <!-- showcase -->
@@ -13,7 +13,7 @@ layout: home
 %}
 
 <!-- Carousel -->
-{% include carousel.html position=3 %}
+{% include carousel--card.html position=3 %}
 
 <!-- Media -->
 {% include media.html position=4 blob1="Photos" blob2="Videos" %}
