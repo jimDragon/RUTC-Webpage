@@ -1,10 +1,12 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
-	<link href="assets/css/default.css" rel="stylesheet">
+	<link href="{{ "assets/css/styles.css" | relative_url }}" rel="stylesheet">
 	<title>{{ page.title }}</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
 			<div class="page-title">
 				<h2>{{ page-title | upcase }}</h2>
 			</div>
-			<div class="wrapper">
+			<div class="wrapper--default">
 				{{ content }}
 			</div>
 		</div>
@@ -26,8 +28,8 @@
 	<div class="hide-corners"></div>
 	<div class="footer">
 		<div class="footer__content">
-			<div>So if you are ready, you can join our team from here:</div>
-        	<a href="" class="btn btn-info btn-center">Volunteer</a>
+			<div>{{ page.footer_text }}</div>
+			<a href="{{ page.footer_link }}" class="btn btn--info btn--center">{{ page.footer_btn }}</a>
 		</div>
 	</div>
 </body>

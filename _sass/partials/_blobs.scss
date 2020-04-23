@@ -1,0 +1,38 @@
+.blob {
+    margin-bottom: 1.4rem;
+    padding: 2.8rem;
+    text-align: center;
+    border-radius: 20px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, map-get($theme-colors, "light") 100%), url(../img/2_Events/3_Workshop.jpg) no-repeat;
+    background-size: cover;
+    box-shadow: 0 14px 10px rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+    
+    &__link {
+        text-decoration: none;
+        color: map-get($theme-colors, "light");
+    }
+    
+    &:hover {
+        filter: brightness(1.2);
+        box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+        transform: scale(1.01);
+    }
+
+    @include breakpoint(screen 539px) {
+        margin: 0 1.5% 0 1.5%;
+        padding: 10% 15%;
+    }
+
+    @include breakpoint(screen 899px) {
+        margin-top: 1rem;
+        padding: 8% 18%;
+    }
+}
+
+.container--blob {
+    @include breakpoint(screen 899px) {
+        justify-content: space-evenly;
+    }
+}

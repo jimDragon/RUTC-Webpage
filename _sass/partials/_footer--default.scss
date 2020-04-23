@@ -1,0 +1,48 @@
+
+.footer {
+    background-color: map-get($theme-colors, "light");
+    color: map-get($theme-colors, "dark");
+
+    &__content{
+        padding: 20% 10% 15% 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        @include breakpoint(screen 560px) {
+            padding: 14% 10% 10% 10%;
+        }
+
+        @include breakpoint(screen 1024px) {
+            padding: 10% 10% 8% 10%;
+        }
+
+        @include breakpoint(screen 1199px) {
+            padding: 8% 10% 6% 10%;
+        }
+    }
+}
+
+.hide-corners {
+    transform: skewY(2.8deg);
+    background-color: map-get($theme-colors, "dark");
+    padding: 1rem;
+    margin-bottom: -3%;
+
+    @include breakpoint(screen 560px) {
+        padding: 2rem;
+        margin-bottom: -4%;
+    }
+
+    @include breakpoint(screen 899px) {
+        transform: skewY(1.2deg);
+        padding: 2rem;
+        margin-bottom: -3%;
+    }
+    
+    @include breakpoint(screen 1590px) {
+        padding: 3rem;
+        margin-bottom: -2%;
+    }
+}

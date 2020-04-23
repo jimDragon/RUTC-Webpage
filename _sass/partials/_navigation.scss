@@ -1,0 +1,80 @@
+.hide-mobile {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: left;
+    padding: 30px 30px 0 30px;
+}
+
+.nav {
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        text-align: left;
+        background-color: map-get($theme-colors, "dark");
+        padding-top: 2em;
+        z-index: 5;
+
+        @include breakpoint(screen 1024px) {
+            padding-top: 0;
+            margin: 0;
+            position: static;
+            width: auto;
+            background: none;
+            text-align: center;
+            list-style: none;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        padding: 1em 2em;
+        color: map-get($theme-colors, "medium");
+        text-decoration: none;
+
+        &:hover {
+            background-color: map-get($theme-colors, "medium");
+            color: map-get($theme-colors, "dark");
+            width: auto;
+        }
+    }
+
+    &__list-item {
+        @include breakpoint(screen 1024px) {
+            display: inline-block;
+        }
+    }
+
+    .exit-btn {
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+        text-emphasis: right;
+    }
+
+    .exit-btn img{
+        width: 35px;
+        cursor: pointer;
+    }
+}
+
+.show-desktop {
+    @include breakpoint(screen 1024px) {
+        display: block;
+        margin: 0 auto 1% auto;
+    }
+}
+
+.hide-desktop {
+    @include breakpoint(screen 1024px) {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+.logo {
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh;
+    
+    img {
+       max-width: 100%;
+       height: auto;
+       margin-bottom: 1.7em;
+    }
+}
