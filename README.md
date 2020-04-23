@@ -43,8 +43,10 @@ Home Page ~> [home]
 - default
    ├── home
    ├── post
-   ├── info
+   ├── standard
    |    └── list
+   ├── info
+   ├── archive
    └── 404
 ```
 
