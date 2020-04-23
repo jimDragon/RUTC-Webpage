@@ -1,4 +1,19 @@
+title: RUTC
 baseurl: /RUTC-Webpage
 exclude: ['README.md']
 plugins:
   - jekyll-paginate
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "standard"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

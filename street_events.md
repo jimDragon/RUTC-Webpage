@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: list
 title: Street Events
 card_category: events
 card_cover: assets/img/1_Landing/Landing_3

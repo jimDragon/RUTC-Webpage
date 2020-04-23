@@ -1,4 +1,5 @@
 ---
+layout: # Removing front matter in order for js to work properly
 ---
 // This js file is responsible for hamburger menu, 
 // scroll navigation, top scroll button and history back button
