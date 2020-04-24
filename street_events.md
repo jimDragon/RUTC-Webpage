@@ -1,6 +1,7 @@
 ---
 layout: list
 title: Street Events
+on_collection: streets
 card_category: events
 card_cover: assets/img/1_Landing/Landing_3
 card_title: Street Events

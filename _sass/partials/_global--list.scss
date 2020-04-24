@@ -1,0 +1,46 @@
+.container--list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem; 
+
+    @include breakpoint(screen 783px) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.poster {
+    .card {
+        margin: 0 1rem 2rem 1rem;
+        margin-bottom: 2rem;
+        max-width: 20rem;
+        
+        position: relative;
+
+        span {
+            position:absolute;
+            top: 0;
+            bottom:0;
+            left: 0;
+            right:0;
+            width: 100%;
+            height: 89%;
+            z-index: 1;
+            background: linear-gradient(0deg, rgba(238,231,203,1) 10%, rgba(0,0,0,0) 80%);
+            background-position:center;
+        }
+
+
+        &--height {
+            height: 28rem;
+            
+        }
+
+        &__content {
+            z-index: 2;
+        }
+    }
+}

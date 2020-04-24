@@ -4,6 +4,12 @@ exclude: ['README.md']
 plugins:
   - jekyll-paginate
 
+collections:
+  festivals:
+    output: true
+  streets:
+    output: true
+
 defaults:
   -
     scope:
@@ -17,3 +23,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "festivals"
+    values:
+      layout: "info"
