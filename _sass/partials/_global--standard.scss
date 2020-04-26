@@ -16,6 +16,6 @@
 }
 
 .cover-img {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, map-get($theme-colors, "dark") 65%), url(../img/3_Volunteers/1_Volunteers.jpg) no-repeat;
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, map-get($theme-colors, "dark") 65%), no-repeat;
     background-size: auto;
 }

@@ -1,5 +1,7 @@
 ---
 title: Volunteers
+category: volunteers
+cover: assets/img/3_Volunteers/1_Volunteers.jpg
 footer_text: "So if you are ready, you can join out team from here:"
 footer_btn: Volunteer
 footer_link:

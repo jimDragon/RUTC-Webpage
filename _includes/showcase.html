@@ -7,8 +7,12 @@ Automatically obtains the link
     <div class="wrapper--home">
         <h2>{{ item.option | upcase }}</h2>
     </div>
-    <div class="showcase">
+{% for showcase in site.pages %}
+    {% if showcase.category == item.option %}
+    <div class="showcase" style="background-image: url({{ showcase.cover | relative_url }});">
         <p class="showcase__text">{{ include.text }}</p>
         <a href="{{ item.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
     </div>
+    {% endif %}
+{% endfor %}
 </section>
