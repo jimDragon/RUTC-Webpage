@@ -12,11 +12,15 @@ layout: default
         <div class="page-title">
             <h2>{{ page.title | upcase }}</h2>
         </div>
-        <div class="wrapper--info">
+        <div class="wrapper--standard">
             {{ content }}
         </div>
     </div>
 </section>
 
+<!-- Carousel -->
+{% if page.gallery == true %}
+    {% include carousel--card.html position=3 %}
+{% endif %}
 <!-- Footer  -->
 {% include footer--standard.html %}

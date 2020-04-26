@@ -8,12 +8,12 @@ layout: standard
 <div class="container--list">
     {% for item in items %}
     <div class="poster">
-        {% include card.html 
+        {% include card.html
             url=item.url
-            cover=item.card_cover 
-            title=item.card_title 
-            description=item.card_description 
-            btn_text="Learn More" 
+            cover=item.cover
+            title=item.title
+            description=item.description
+            btn_text="Learn More"
         %}
     </div>
     {% endfor %}

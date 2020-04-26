@@ -17,6 +17,10 @@ defaults:
       type: "pages"
     values:
       layout: "standard"
+      footer:
+        text: "Join this year's festival!"
+        btn: "Join the Event"
+        link: 
   -
     scope:
       path: ""
@@ -28,10 +32,20 @@ defaults:
       path: ""
       type: "festivals"
     values:
-      layout: "info"
+      layout: "standard"
+      gallery: true
+      footer:
+        text: "Join this year's festival!"
+        btn: "Join the Event"
+        link:
   -
     scope:
       path: ""
       type: "streets"
     values:
-      layout: "info"
+      layout: "standard"
+      gallery: true
+      footer:
+        text: "Join this year's Street event!"
+        btn: "Join the Event"
+        link:
