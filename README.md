@@ -2,10 +2,10 @@
 Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
 # Rough notes
-*(They are going to be converted to docs later on)*
+*(TODO: Convert to theme docs)*
 
-## Usage
-1. Setup categories in the navigation.yaml (to be renamed categories)
+## Theme usage
+1. Setup categories in the navigation.yaml in the order you want each category to be shown (TODO: rename navigation.yaml categories.yaml)
 2. Determine the presentation of each category in the home page and import the necessary include from `_includes` to index.page
 3. Setup cards and pages
 
