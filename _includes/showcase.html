@@ -1,17 +1,13 @@
-<!-- Position parameter means which option in the navigation.yml is going to be used/represented. 
-Automatically obtains the link
--->
-
-{% assign item = site.data.navigation[include.position] %}
-<section id="{{ item.option | downcase }}">
+{% assign category = site.data.categories[include.position] %}
+<section id="{{ category.name | downcase }}">
     <div class="wrapper--home">
-        <h2>{{ item.option | upcase }}</h2>
+        <h2>{{ category.name | upcase }}</h2>
     </div>
 {% for showcase in site.pages %}
-    {% if showcase.category == item.option %}
+    {% if showcase.category == category.name %}
     <div class="showcase" style="background-image: url({{ showcase.cover | relative_url }});">
-        <p class="showcase__text">{{ include.text }}</p>
-        <a href="{{ item.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
+        <p class="showcase__text">{{ showcase.description }}</p>
+        <a href="{{ category.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
     </div>
     {% endif %}
 {% endfor %}

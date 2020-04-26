@@ -1,0 +1,14 @@
+#  NOTICE: Names should be in lowercase letters
+
+- name: "news"
+  link: "#"
+- name: "events"
+  link: "#"
+- name: "volunteers"
+  link: /volunteers.html
+- name: "explore"
+  link: "#"
+- name: "media"
+  link: "#"
+- name: "contact"
+  link: /contact.html

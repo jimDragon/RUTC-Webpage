@@ -1,18 +1,12 @@
-<!-- 
-    Navigation options are entered at the navigation.yml file (_data/nagivation.yml) and then
-they are looped through and displayed as ids that are used by the modules.js file 
-(assets/js/modules.js).
--->
-
 <nav class="nav">
     <a href="#" class="hide-desktop">
-        <img class="menu" id="menu" src="assets/img/icons/ham_menu.svg" alt="Toggle menu">
+        <img class="menu" id="menu" src="{{ "assets/img/icons/ham_menu.svg" | relative_url }}" alt="Toggle menu">
     </a>
 
     <ul class="nav__list show-desktop hide-mobile" id="nav">
-        <li id="exit" class="exit-btn hide-desktop"><img src="assets/img/icons/exit.svg" alt="Exit menu"></li>
-        {% for item in site.data.navigation %}
-            <li class="nav__list-item"><a class="nav__link" href="#{{ item.option | downcase }}">{{ item.option | upcase }}</a></li>
+        <li id="exit" class="exit-btn hide-desktop"><img src="{{ "assets/img/icons/exit.svg" | relative_url }}" alt="Exit menu"></li>
+        {% for category in site.data.categories %}
+            <li class="nav__list-item"><a class="nav__link" href="#{{ category.name | downcase }}">{{ category.name | upcase }}</a></li>
         {% endfor %}
     </ul>
 </nav>

@@ -1,18 +1,18 @@
-{% assign section-title = site.data.navigation[include.position] %}
-<section id="{{ section-title.option | downcase }}">
+{% assign category = site.data.categories[include.position] %}
+<section id="{{ category.name | downcase }}">
     <div class="panel">
         <div class="wrapper-carousel">
             <div class="wrapper--home">
-                <h2>{{ section-title.option | upcase }}</h2>
+                <h2>{{ category.name | upcase }}</h2>
             </div>
             <div class="container--card">
-                {% for item in site.pages %}
-                    {% if item.card_category == section-title.option %}
+                {% for card in site.pages %}
+                    {% if card.category == category.name %}
                         {% include card.html 
-                            url=item.url
-                            cover=item.card_cover 
-                            title=item.card_title 
-                            description=item.card_description 
+                            url=card.url
+                            cover=card.cover
+                            title=card.title 
+                            description=card.description 
                             btn_text="Learn More" 
                         %}
                     {% endif%}

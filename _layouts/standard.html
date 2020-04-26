@@ -5,9 +5,7 @@ layout: default
 {% assign page-title = page.title %}
 <section id="{{ page-title | downcase }}">
     <div class="cover-img"
-    {% if page.card_cover %} 
-        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 65%), url({{ page.card_cover | relative_url }}) no-repeat;"
-    {% elsif page.cover %}
+    {% if page.cover %}
         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 65%), url({{ page.cover | relative_url }}) no-repeat;"
     {% endif %}>
         <div class="btn-back"><a onclick="goBack()"><-</a></div>

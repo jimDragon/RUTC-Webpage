@@ -1,12 +1,7 @@
-<!-- Position parameter means which option in the navigation.yml is going to be used/represented. 
-    Maybe in the future the user should have the freedom to add more than just 2 blobs by creating the
-    corresponding pages just like the carousel system
--->
-
-{% assign section-title = site.data.navigation[include.position] %}
-<section id="{{ section-title.option | downcase }}">
+{% assign category = site.data.categories[include.position] %}
+<section id="{{ category.name | downcase }}">
     <div class="wrapper--home">
-        <h2>{{ section-title.option | upcase }}</h2>
+        <h2>{{ category.name | upcase }}</h2>
         <div class="container container--blob">
             <div class="blob"><a class="blob__link" href=""><h2>{{ include.blob1 }}</h2></a></div>
             <div class="blob"><a class="blob__link" href=""><h2>{{ include.blob2 }}</h2></a></div>

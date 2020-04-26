@@ -29,3 +29,9 @@ defaults:
       type: "festivals"
     values:
       layout: "info"
+  -
+    scope:
+      path: ""
+      type: "streets"
+    values:
+      layout: "info"
