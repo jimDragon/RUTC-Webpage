@@ -1,6 +1,14 @@
 # RUTC-Webpage [wip]
 Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
+# Rough notes
+*(They are going to be converted to docs later on)*
+
+## Usage
+1. Setup categories in the navigation.yaml (to be renamed categories)
+2. Determine the presentation of each category in the home page and import the necessary include from `_includes` to index.page
+3. Setup cards and pages
+
 ## Site Structure
 ```
 Home Page ~> [home]
