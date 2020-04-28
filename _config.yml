@@ -1,14 +1,41 @@
+# Setup
 title: RUTC
 baseurl: /RUTC-Webpage
 exclude: ['README.md']
-plugins:
-  - jekyll-paginate
 
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+
+# Collections
 collections:
   festivals:
     output: true
   streets:
     output: true
+
+# Defaults
+permalink: pretty
+
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'           # The default document collection to paginate if nothing is specified ('posts' is default)
+  per_page: 3
+  permalink: '/page-:num.html'  # Pages are index.html inside this folder (default)
+  title: ':title'               # Optional the title format for the paginated pages
+  limit: 0                      # Limit how many pagenated pages to create (default: 0, means all)
+  sort_field: 'title'
+  sort_reverse: true
+  category: 'posts'             # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  tag: ''                       # Optional, the default tag to use, omit to disable
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts, 
+  # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
+  locale: '' 
+  trail: 
+    before: 1
+    after: 1
+  extension: html
 
 defaults:
   -

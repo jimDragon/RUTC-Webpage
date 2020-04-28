@@ -1,0 +1,44 @@
+.pager {
+    font-weight: map-get($font-weights, "bold" );
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+
+    &__island {
+        background-color: map-get($theme-colors, "light");
+        border-radius: 55px 55px 55px 55px;
+    }
+}
+
+.pagination {
+    display: inline-block;
+    list-style: none;
+
+    &__item {
+        background-color: map-get($theme-colors, "light");
+        color: map-get($theme-colors, "orange");
+        float: left;
+        padding: 0.5rem 1rem;
+        border-radius: 100%;
+        width: 39.7px;
+        
+        &:hover:not(.pagination__item--active) {
+           background-color: map-get($theme-colors, "medium");
+        }
+
+        &--active {
+            background-color: map-get($theme-colors, "orange");
+            color: map-get($theme-colors, "light" )
+        }
+
+        &--previous {
+            margin-right: 1.4rem;
+        }
+
+        &--next {
+            margin-left: 1.4rem;
+        }
+    }
+
+}

@@ -3,10 +3,8 @@ layout: standard
 ---
 {{ content }}
 
-{% assign items = site[page.on_collection] %}
-
 <div class="container--list">
-    {% for item in items %}
+    {% for item in paginator.posts %}
     <div class="poster">
         {% include card.html
             url=item.url
@@ -17,4 +15,26 @@ layout: standard
         %}
     </div>
     {% endfor %}
+</div>
+
+<div class="pager">
+    {% if paginator.total_pages > 1 %}
+        <a class="pagination__item pagination__item--previous" href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+        {% if paginator.page_trail %}
+            <div class="pager__island">
+                {% for trail in paginator.page_trail %}
+                    <a 
+                        {% if page.url == trail.path %} 
+                            class="pagination__item pagination__item--active"
+                        {% else %}
+                            class="pagination__item"
+                        {% endif %} 
+                        href="{{ trail.path | prepend: site.baseurl }}" title="{{ trail.title }}">
+                        {{ trail.num }}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <a class="pagination__item pagination__item--next" href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+    {% endif %}
 </div>

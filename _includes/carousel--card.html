@@ -7,7 +7,15 @@
             </div>
             <div class="container--card">
                 {% for card in site.pages %}
-                    {% if card.category == category.name %}
+                    {% if card.category == category.name and card.url contains "index.html" %}
+                        {% include card.html 
+                            url=card.url
+                            cover=card.cover
+                            title=card.title 
+                            description=card.description 
+                            btn_text="Learn More" 
+                        %}
+                    {% elsif card.category == category.name and card.pagination.enabled == false %}
                         {% include card.html 
                             url=card.url
                             cover=card.cover
