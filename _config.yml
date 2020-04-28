@@ -1,6 +1,7 @@
 # Setup
 title: RUTC
-baseurl: /RUTC-Webpage
+# baseurl: /RUTC-Webpage
+baseurl: ""
 exclude: ['README.md']
 
 # Plugins
