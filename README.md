@@ -50,12 +50,10 @@ Home Page ~> [home]
 ```
 - default
    ├── home
-   ├── post
    ├── standard
-   |    └── list
-   ├──
-   ├──
-   └──
+   |    ├── list
+   |    └── post
+   └── 404
 ```
 
 ### Home layout
