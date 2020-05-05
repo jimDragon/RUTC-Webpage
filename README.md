@@ -53,9 +53,9 @@ Home Page ~> [home]
    ├── post
    ├── standard
    |    └── list
-   ├── info
-   ├── archive
-   └── 404
+   ├──
+   ├──
+   └──
 ```
 
 ### Home layout
