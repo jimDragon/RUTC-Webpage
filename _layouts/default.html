@@ -14,9 +14,11 @@
 		<title>{% if page.layout == "home" %}{{ site.title }}{% else %}{{ site.title }} | {{ page.title }}{% endif %}</title>
 	</head>
 	<body>
-
 		{{ content }}
 
+		<!-- Footer  -->
+		{% include footer.html %}
+		
 		<!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="{{ "assets/js/modules.js" | relative_url }}"></script>

@@ -7,10 +7,13 @@
 
 // Core CSS
 @import "partials/global";
+@import "partials/global--standard";
+@import "partials/global--home";
+@import "partials/global--list";
+@import "partials/global--info";
 
 // Components
 @import "partials/buttons";
-@import "partials/logo"; 
 @import "partials/posts";
 @import "partials/showcase";
 @import "partials/blobs";
@@ -18,9 +21,6 @@
 @import "partials/pagination";
 
 // Layout specific
+@import "partials/landing"; 
 @import "partials/navigation";
-@import "partials/footer--standard";
-@import "partials/global--standard";
-@import "partials/global--home";
-@import "partials/global--list";
-@import "partials/global--info";
+@import "partials/footer";

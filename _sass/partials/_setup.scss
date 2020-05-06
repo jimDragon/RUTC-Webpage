@@ -22,6 +22,16 @@ $font-weights: (
     padding: 0;
 }
 
+body {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    background-color: map-get($theme-colors, "dark");
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    color: map-get($theme-colors, "medium");
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: map-get($font-weights, "semibold");
     letter-spacing: .04em;
@@ -35,4 +45,16 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+section {
+    margin-bottom: 20%;
+
+    @include breakpoint(screen 539px) {
+        margin-bottom: 13%;
+    }
+
+    @include breakpoint(screen 899px) {
+        margin-bottom: 5rem;
+    }
 }

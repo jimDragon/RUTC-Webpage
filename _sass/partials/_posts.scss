@@ -34,17 +34,11 @@
     }
     
     @include breakpoint(screen 539px) {
-        padding-top: 7rem;
-    }
-    
-    @include breakpoint(screen 899px) {
-        padding-top: 12rem;
+        padding-top: 4rem;
     }
 }
 
 .container--feed {
-    @include breakpoint(screen 539px) {
-        display: grid;
-        grid-template-columns: [col1] 33.3% [col2] 33.3% [col3] 33.3%;
-    }
+    display: flex;
+    flex-direction: column;
 }

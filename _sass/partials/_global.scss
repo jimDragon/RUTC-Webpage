@@ -1,32 +1,3 @@
-body {
-    scroll-behavior: smooth;
-    padding: 0;
-    margin: 0;
-    background-color: map-get($theme-colors, "dark");
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.2rem;
-    color: map-get($theme-colors, "medium");
-}
-
-section {
-    margin-bottom: 20%;
-
-    @include breakpoint(screen 539px) {
-        margin-bottom: 13%;
-    }
-
-    @include breakpoint(screen 899px) {
-        margin-bottom: 5rem;
-    }
-}
-
-.landing {
-    height: 100vh;
-    background-image: url(../img/1_Landing/Landing_2);
-    background-position: center;
-    background-size: cover;
-}
-
 // Used for applying css properties in a group of elements
 .container {
     display: flex;

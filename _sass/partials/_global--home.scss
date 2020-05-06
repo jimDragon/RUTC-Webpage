@@ -4,7 +4,7 @@
     margin-left:  auto;
     max-width: 90%;
 
-    @include breakpoint(screen 1399px) {
-        max-width: 1150px;
+    @include breakpoint(screen 1300px) {
+        max-width: 1080px;
     }
 }
