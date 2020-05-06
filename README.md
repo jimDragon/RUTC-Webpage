@@ -50,11 +50,9 @@ Home Page ~> [home]
 ```
 - default
    ├── home
-   ├── post
    ├── standard
-   |    └── list
-   ├── info
-   ├── archive
+   |    ├── list
+   |    └── post
    └── 404
 ```
 
