@@ -24,7 +24,7 @@ $font-weights: (
 
 h1, h2, h3, h4, h5 {
     font-weight: map-get($font-weights, "semibold");
-    letter-spacing: .15em;
+    letter-spacing: .04em;
     margin: 1em 0 1em 0;
 }
 

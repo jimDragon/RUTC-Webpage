@@ -4,15 +4,8 @@ body {
     margin: 0;
     background-color: map-get($theme-colors, "dark");
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     color: map-get($theme-colors, "medium");
-}
-
-header {
-    height: 100vh;
-    background-image: url(../img/1_Landing/Landing_2);
-    background-position: center;
-    background-size: cover;
 }
 
 section {
@@ -27,6 +20,13 @@ section {
     }
 }
 
+.landing {
+    height: 100vh;
+    background-image: url(../img/1_Landing/Landing_2);
+    background-position: center;
+    background-size: cover;
+}
+
 // Used for applying css properties in a group of elements
 .container {
     display: flex;
@@ -35,5 +35,6 @@ section {
     @include breakpoint(screen 539px) {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
     }
 }

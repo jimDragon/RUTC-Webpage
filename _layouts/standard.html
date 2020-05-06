@@ -6,15 +6,15 @@ layout: default
 <section id="{{ page-title | downcase }}">
     <div class="cover-img"
     {% if page.cover %}
-        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 65%), url({{ page.cover | relative_url }}) no-repeat;"
+        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 100%), url({% if page.bg %}{{ page.bg | relative_url }}{% else %}{{ page.cover | relative_url }}{% endif %}) center center/cover no-repeat;"
     {% endif %}>
         <div class="btn-back"><a onclick="goBack()"><-</a></div>
         <div class="page-title">
             <h2>{{ page.title | upcase }}</h2>
         </div>
-        <div class="wrapper--standard">
-            {{ content }}
-        </div>
+    </div>
+    <div class="wrapper--standard">
+        {{ content }}
     </div>
 </section>
 
@@ -22,5 +22,6 @@ layout: default
 {% if page.gallery == true %}
     {% include carousel--card.html position=3 %}
 {% endif %}
+
 <!-- Footer  -->
 {% include footer--standard.html %}

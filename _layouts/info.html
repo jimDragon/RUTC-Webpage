@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<header class="header">
+    <div class="btn-back"><a onclick="goBack()"><-</a></div>
+    <img class="bg-img" src="{{ page.bg | relative_url }}"><span class="gradient"></span>
+</header>
+<main class="wrapper--standard">
+    {{ content }}
+
+    {% assign category = lineup %}
+    <section class="lineup">
+        <h2>LINEUP</h2>
+        <div class="container">
+            {% if page.lineup %}
+                {% for band in page.lineup %}
+                    <div class="blob"><a class="blob__link" href=""><h2>{{ band }}</h2></a></div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+<!-- Carousel -->
+{% include carousel--card.html position=3 %}
+
+<!-- showcase -->
+{% include showcase.html position=2
+    btn_text="Learn More"
+%}
+
+<!-- Media -->
+{% include media.html position=4 blob1="Photos" blob2="Videos" %}
+
+<!-- Footer  -->
+{% include footer--standard.html %} 

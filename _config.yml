@@ -60,7 +60,7 @@ defaults:
       path: ""
       type: "festivals"
     values:
-      layout: "standard"
+      layout: "info"
       gallery: true
       footer:
         text: "Join this year's festival!"
