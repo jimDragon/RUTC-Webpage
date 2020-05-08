@@ -8,17 +8,25 @@ layout: default
 <main class="wrapper--standard">
     {{ content }}
 
-    {% assign category = lineup %}
+    <!-- Move this to an include -->
+    {% if page.bands %}
     <section class="lineup">
         <h2>LINEUP</h2>
         <div class="container">
-            {% if page.lineup %}
-                {% for band in page.lineup %}
-                    <div class="blob"><a class="blob__link" href=""><h2>{{ band }}</h2></a></div>
+            {% for i in page.bands %}
+                {% for j in site.bands %}
+                    {% assign band = j.title | downcase %}
+                    {% if band == i %}
+                    <div class="blob">
+                        <a class="blob__link" href="{{ j.url | relative_url }}"><h2>{{ j.name }}</h2></a>
+                    </div>
+                    {% endif %}
                 {% endfor %}
-            {% endif %}
+            {% endfor %}
         </div>
     </section>
+    {% endif %}
+
 </main>
 
 <!-- Carousel -->

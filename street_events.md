@@ -4,7 +4,7 @@ title: Street Events
 on_collection: streets
 category: events
 cover: assets/img/2_Events/2_Street.jpg
-description: The big day that everyone is waiting for. Here you have the oportunity to see and appreciate big artists and local bands.
+description: Come and jam together with the groups that are participating to the fetival
 permalink: /streets/
 pagination:
     enabled: true

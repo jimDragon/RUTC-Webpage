@@ -14,6 +14,8 @@ collections:
     output: true
   streets:
     output: true
+  bands:
+    output: true
 
 # Defaults
 permalink: pretty
@@ -70,6 +72,17 @@ defaults:
     scope:
       path: ""
       type: "streets"
+    values:
+      layout: "standard"
+      gallery: true
+      footer:
+        text: "Join this year's Street event!"
+        btn: "Join the Event"
+        link:
+  -
+    scope:
+      path: ""
+      type: "bands"
     values:
       layout: "standard"
       gallery: true

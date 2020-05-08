@@ -2,21 +2,19 @@
 layout: default
 ---
 <!-- Main  -->
-{% assign page-title = page.title %}
-<section id="{{ page-title | downcase }}">
-    <div class="cover-img"
+{% assign t = page.title %}
+<div class="cover-img"
     {% if page.cover %}
         style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 100%), url({% if page.bg %}{{ page.bg | relative_url }}{% else %}{{ page.cover | relative_url }}{% endif %}) center center/cover no-repeat;"
     {% endif %}>
-        <div class="btn-back"><a onclick="goBack()"><-</a></div>
-        <div class="page-title">
-            <h2>{{ page.title | upcase }}</h2>
-        </div>
+    <div class="btn-back"><a onclick="goBack()"><-</a></div>
+    <div class="page-title">
+        <h2>{{ t | upcase }}</h2>
     </div>
-    <div class="wrapper--standard">
-        {{ content }}
-    </div>
-</section>
+</div>
+<div class="wrapper--standard">
+    {{ content }}
+</div>
 
 <!-- Carousel -->
 {% if page.gallery == true %}

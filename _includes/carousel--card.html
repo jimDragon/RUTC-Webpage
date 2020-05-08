@@ -1,4 +1,9 @@
-{% assign category = site.data.categories[include.position] %}
+{% if include.position %}
+    {% assign category = site.data.categories[include.position] %}
+{% elsif include.other %}
+    {% assign category = page.other %}
+{% endif %}
+
 <section id="{{ category.name | downcase }}">
     <div class="panel">
         <div class="wrapper-carousel">

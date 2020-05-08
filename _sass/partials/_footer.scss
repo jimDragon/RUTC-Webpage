@@ -27,6 +27,7 @@
 .hide-corners {
     transform: skewY(2.8deg);
     background-color: map-get($theme-colors, "dark");
+    margin-top: 1rem;
     padding: 1rem;
     margin-bottom: -3%;
 
