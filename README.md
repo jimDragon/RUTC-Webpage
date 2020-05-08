@@ -5,9 +5,9 @@ Development/testing repository for upcoming Rock Under The Clock Festival webpag
 *(TODO: Convert to theme docs)*
 
 ## Theme usage
-1. Setup categories in the navigation.yaml in the order you want each category to be shown (TODO: rename navigation.yaml categories.yaml)
-2. Determine the presentation of each category in the home page and import the necessary include from `_includes` to index.page
-3. Setup cards and pages
+1. Setup categories in the navigation.yaml in the order you want each category to be shown.
+2. Determine the presentation type of each category in the home page and import the necessary include from `_includes` to index.page
+3. Setup cards and pages with proper front matter
 
 ## Site Structure
 ```
