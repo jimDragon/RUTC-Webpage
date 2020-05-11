@@ -3,7 +3,7 @@ layout: list
 title: Street Events
 on_collection: streets
 category: events
-cover: assets/img/2_Events/2_Street.jpg
+image: assets/img/2_Events/2_Street.jpg
 description: Come and jam together with the groups that are participating to the fetival
 permalink: /streets/
 pagination:

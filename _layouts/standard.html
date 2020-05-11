@@ -4,19 +4,19 @@ layout: default
 <!-- Main  -->
 {% assign t = page.title %}
 <div class="cover-img"
-    {% if page.cover %}
-        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 100%), url({% if page.bg %}{{ page.bg | relative_url }}{% else %}{{ page.cover | relative_url }}{% endif %}) center center/cover no-repeat;"
+    {% if page.image %}
+        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, #19191B 100%), url({% if page.bg %}{{ page.bg | relative_url }}{% else %}{{ page.image | relative_url }}{% endif %}) center center/cover no-repeat;"
     {% endif %}>
     <div class="btn-back"><a onclick="goBack()"><-</a></div>
     <div class="page-title">
         <h2>{{ t | upcase }}</h2>
     </div>
 </div>
-<div class="wrapper--standard">
+<div class="wrapper">
     {{ content }}
 </div>
 
 <!-- Carousel -->
 {% if page.gallery == true %}
-    {% include carousel--card.html position=3 %}
+    {% include carousel.html category=3 %}
 {% endif %}

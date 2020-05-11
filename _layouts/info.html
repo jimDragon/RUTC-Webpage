@@ -5,7 +5,7 @@ layout: default
     <div class="btn-back"><a onclick="goBack()"><-</a></div>
     <img class="bg-img" src="{{ page.bg | relative_url }}"><span class="gradient"></span>
 </header>
-<main class="wrapper--standard">
+<main class="wrapper">
     {{ content }}
 
     <!-- Move this to an include -->
@@ -30,10 +30,10 @@ layout: default
 </main>
 
 <!-- Carousel -->
-{% include carousel--card.html position=3 %}
+{% include carousel.html other="activities" %}
 
 <!-- showcase -->
-{% include showcase.html position=2
+{% include showcase.html other="locations"
     btn_text="Learn More"
 %}
 

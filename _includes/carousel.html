@@ -1,0 +1,58 @@
+{% if include.category %}
+    {% assign category = site.data.categories[include.category] %}
+{% elsif include.other %}
+    {% assign items = page[include.other] %}
+{% endif %}
+
+<section id="{{ category.name | downcase }}">
+    <div class="panel">
+        <div class="wrapper-carousel">
+            <div class="wrapper">
+                <h2>
+                {% if include.other %}
+                    {{ include.other | upcase }}
+                {% elsif include.category %}
+                    {{ category.name | upcase }}
+                {% endif %}
+                </h2>
+            </div>
+            <div class="container--card">
+                {% if include.category %}
+                    {% for card in site.pages %}
+                        {% if card.category == category.name and card.url contains "index.html" %}
+                            {% include card.html 
+                                url=card.url
+                                cover=card.image
+                                title=card.title 
+                                description=card.description 
+                                btn_text="Learn More" 
+                            %}
+                        {% elsif card.category == category.name and card.pagination.enabled == false %}
+                            {% include card.html 
+                                url=card.url
+                                cover=card.image
+                                title=card.title 
+                                description=card.description 
+                                btn_text="Learn More" 
+                            %}
+                        {% endif%}
+                    {% endfor %}
+                {% elsif include.other %}
+                    {% for item in items %}
+                        {% for card in site[item] %}
+                            {% if card.year == page.year %}
+                                {% include card.html 
+                                    url=card.url
+                                    cover=card.image
+                                    title=card.title 
+                                    description=card.description 
+                                    btn_text="Learn More" 
+                                %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

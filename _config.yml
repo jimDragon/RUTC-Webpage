@@ -16,6 +16,10 @@ collections:
     output: true
   bands:
     output: true
+  locations:
+    output: true
+  workshops:
+    output: true    
 
 # Defaults
 permalink: pretty

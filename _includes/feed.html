@@ -1,6 +1,6 @@
 {% assign category = site.data.categories[include.position] %}
 <section id="{{ category.name | downcase }}">
-    <div class="wrapper--home">
+    <div class="wrapper">
         <h2>{{ category.name | upcase }}</h2>
         <div class="container container--feed">
             {% for post in site.posts  limit:3 %}

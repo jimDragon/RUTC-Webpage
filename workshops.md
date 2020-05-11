@@ -1,13 +1,13 @@
 ---
 layout: list
-title: Past Festivals
-on_collection: festivals
+title: Workshops
+on_collection: workshops
 category: events
-image: assets/img/2_Events/1_Stage.jpg
+image: assets/img/2_Events/3_Workshop.jpg
 description: The big day that everyone is waiting for. Here you have the oportunity to see and appreciate big artists and local bands.
-permalink: /festivals/
+permalink: /workshops/
 pagination:
     enabled: true
-    collection: festivals
+    collection: workshops
 ---
-Check out all the historic Rock Under The Clock festivals!
+Check out all the workshops from Rock Under The Clock festivals!

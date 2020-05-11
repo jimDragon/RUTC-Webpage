@@ -1,14 +1,38 @@
-{% assign category = site.data.categories[include.position] %}
+{% if include.category %}
+    {% assign category = site.data.categories[include.category] %}
+{% elsif include.other %}
+    {% assign item = include.other %}
+{% endif %}
+
+
+{% assign category = site.data.categories[include.category] %}
 <section id="{{ category.name | downcase }}">
-    <div class="wrapper--home">
-        <h2>{{ category.name | upcase }}</h2>
+    <div class="wrapper">
+        <h2>
+        {% if include.other %}
+            {{ item | upcase }}
+        {% elsif include.category %}
+            {{ category.name | upcase }}
+        {% endif %}
+        </h2>
     </div>
-{% for showcase in site.pages %}
-    {% if showcase.category == category.name %}
-    <div class="showcase" style="background-image: url({{ showcase.cover | relative_url }});">
-        <p class="showcase__text">{{ showcase.description }}</p>
-        <a href="{{ category.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
-    </div>
+    {% if include.category %}
+        {% for showcase in site.pages %}
+            {% if showcase.category == category.name %}
+            <div class="showcase" style="background-image: url({{ showcase.image | relative_url }});">
+                <p class="showcase__text">{{ showcase.description }}</p>
+                <a href="{{ category.link | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
+            </div>
+            {% endif %}
+        {% endfor %}
+    {% elsif include.other %}
+        {% for showcase in site[item] %}
+            {% if showcase.num == page.[item] %}
+            <div class="showcase" style="background-image: url({{ showcase.image | relative_url }});">
+                <p class="showcase__text">{{ showcase.description }}</p>
+                <a href="{{ showcase.url | relative_url }}" class="btn btn--info">{{ include.btn_text }}</a>
+            </div>
+            {% endif %}
+        {% endfor %}
     {% endif %}
-{% endfor %}
 </section>
