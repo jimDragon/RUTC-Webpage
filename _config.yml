@@ -1,8 +1,8 @@
 # Setup
 title: RUTC
-# baseurl: /RUTC-Webpage
+# baseurl: /RUTC-Webpage # For gh-pages
 baseurl: ""
-exclude: ['README.md']
+exclude: ["README.md"]
 
 # Plugins
 plugins:
@@ -19,7 +19,7 @@ collections:
   locations:
     output: true
   workshops:
-    output: true    
+    output: true
 
 # Defaults
 permalink: pretty
@@ -27,26 +27,25 @@ permalink: pretty
 pagination:
   enabled: true
   debug: false
-  collection: 'posts'           # The default document collection to paginate if nothing is specified ('posts' is default)
+  collection: "posts" # The default document collection to paginate if nothing is specified ('posts' is default)
   per_page: 3
-  permalink: '/page-:num.html'  # Pages are index.html inside this folder (default)
-  title: ':title'               # Optional the title format for the paginated pages
-  limit: 0                      # Limit how many pagenated pages to create (default: 0, means all)
-  sort_field: 'title'
+  permalink: "/page-:num.html" # Pages are index.html inside this folder (default)
+  title: ":title" # Optional the title format for the paginated pages
+  limit: 0 # Limit how many pagenated pages to create (default: 0, means all)
+  sort_field: "title"
   sort_reverse: true
-  category: 'posts'             # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
-  tag: ''                       # Optional, the default tag to use, omit to disable
-  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts, 
+  category: "posts" # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  tag: "" # Optional, the default tag to use, omit to disable
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts,
   # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
-  locale: '' 
-  trail: 
+  locale: ""
+  trail:
     before: 1
     after: 1
   extension: html
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
@@ -54,15 +53,13 @@ defaults:
       footer:
         text: "Join this year's festival!"
         btn: "Join the Event"
-        link: 
-  -
-    scope:
+        link:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
       type: "festivals"
     values:
@@ -72,8 +69,7 @@ defaults:
         text: "Join this year's festival!"
         btn: "Join the Event"
         link:
-  -
-    scope:
+  - scope:
       path: ""
       type: "streets"
     values:
@@ -83,8 +79,7 @@ defaults:
         text: "Join this year's Street event!"
         btn: "Join the Event"
         link:
-  -
-    scope:
+  - scope:
       path: ""
       type: "bands"
     values:
@@ -94,3 +89,14 @@ defaults:
         text: "Join this year's Street event!"
         btn: "Join the Event"
         link:
+  - scope:
+      path: ""
+      type: "workshops"
+    values:
+      layout: "standard"
+      gallery: true
+      footer:
+        text: "Join this year's Street event!"
+        btn: "Join the Event"
+        link:
+

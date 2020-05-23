@@ -5,14 +5,24 @@ layout: standard
 
 <div class="container--list">
     {% for item in paginator.posts %}
-    <div class="poster">
+    {% if item.bands %}
+        <div class="poster">
+            {% include card.html
+                url=item.url
+                cover=item.image
+                title=item.title
+                btn_text="Learn More"
+            %}
+        </div>
+    {% else %}
         {% include card.html
             url=item.url
             cover=item.image
             title=item.title
+            description=item.description
             btn_text="Learn More"
         %}
-    </div>
+    {% endif %}
     {% endfor %}
 </div>
 
