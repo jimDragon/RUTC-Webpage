@@ -46,3 +46,12 @@
         }
     }
 }
+
+.list__item {
+    .card {
+        margin: 0 1rem 2.4rem 1rem;
+        max-width: 20rem;
+        position: relative;
+
+    }
+}
