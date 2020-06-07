@@ -1,3 +1,3 @@
 ---
-name: Cosmonuts
+title: Cosmonuts
 ---

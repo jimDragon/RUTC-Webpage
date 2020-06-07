@@ -15,10 +15,10 @@ layout: default
         <div class="container">
             {% for i in page.bands %}
                 {% for j in site.bands %}
-                    {% assign band = j.title | downcase %}
+                    {% assign band = j.title %}
                     {% if band == i %}
                     <div class="blob">
-                        <a class="blob__link" href="{{ j.url | relative_url }}"><h2>{{ j.name }}</h2></a>
+                        <a class="blob__link" href="{{ j.url | relative_url }}"><h2>{{ j.title }}</h2></a>
                     </div>
                     {% endif %}
                 {% endfor %}
