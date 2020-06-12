@@ -1,8 +1,7 @@
 # RUTC-Webpage [wip]
 Development/testing repository for upcoming Rock Under The Clock Festival webpage
 
-# Rough notes
-*(TODO: Convert to theme docs)*
+# All of the following are rough notes that will later turn into theme docs
 
 ## Theme usage
 1. Setup categories in the navigation.yaml in the order you want each category to be shown.
