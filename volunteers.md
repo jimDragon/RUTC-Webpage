@@ -2,7 +2,7 @@
 title: Volunteers
 gallery: true
 category: volunteers
-image: assets/img/volunteers.jpg
+image: assets/img/volunteers_c.jpg
 description: "Another way to participate in this event is by volunteering! It’s a great opportunity to meet new people and have fun while also helping the festival activities."
 footer:
     text: "So if you are ready, you can join out team from here:"
