@@ -1,7 +1,7 @@
 ---
 num: 2
 title: East Trench Theater
-image: assets/img/4_Explore/1_Venues.jpg
+image: assets/img/locations.jpg
 description: Checkout the East Trench Theater and its history
 layout: standard
 ---

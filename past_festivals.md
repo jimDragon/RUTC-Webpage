@@ -3,7 +3,7 @@ layout: list
 title: Past Festivals
 on_collection: festivals
 category: events
-image: assets/img/2_Events/1_Stage.jpg
+image: assets/img/pastfestivals.jpg
 description: The big day that everyone is waiting for. Here you have the oportunity to see and appreciate big artists and local bands.
 permalink: /festivals/
 pagination:
