@@ -63,9 +63,9 @@ header {
 	margin-top: 0.5rem;
 }
 
-.btn:hover {
+/* .btn:hover {
     filter: brightness(1.2);
-}
+} */
 
 .btn-center {
     margin-right: auto;
