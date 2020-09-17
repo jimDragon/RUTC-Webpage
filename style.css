@@ -74,9 +74,10 @@ header {
 }
 
 .btn-primary {
-    background-color: var(--clr-red);
-    box-shadow: 0px 6px 6px #AD2929;
-    animation: move 1s infinite alternate;
+    opacity: 60%;
+    background-color: #b1a9ad;
+    /* box-shadow: 0px 6px 6px #AD2929; */
+    /* animation: move 1s infinite alternate; */
 }
 
 .btn-info {
@@ -118,8 +119,9 @@ header {
 }
 
 .days, .hours, .minutes, .seconds, .left, .text {
+  opacity: 70%;
   display: inline-block;
-  background-color: white;
+  background-color: var(--clr-white);
   margin: 0.2rem;
   padding: 0.5rem;
   border-radius: 5px;
@@ -130,8 +132,8 @@ header {
 }
 
 .text {
-	background-color: var(--clr-red);
-	color:white;
+	background-color: #b1a9ad;
+	color: var(--clr-white);
 }
 
 .c-number {
