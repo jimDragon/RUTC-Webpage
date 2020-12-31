@@ -1,4 +1,4 @@
 ---
 title: Cosmonuts
-image: assets/img/bands/cosmonuts/cosmonuts.jpg
+image: assets/img/bands/cosmonuts/cosmonuts_comp.jpg
 ---
