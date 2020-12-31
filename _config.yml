@@ -20,6 +20,8 @@ collections:
     output: true
   workshops:
     output: true
+  videos:
+    output: true
 
 # Defaults
 permalink: pretty

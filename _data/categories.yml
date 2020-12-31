@@ -9,6 +9,7 @@
 - name: "explore"
   link: "#"
 - name: "media"
-  link: "#"
+  link1: /photos
+  link2: /videos
 - name: "contact"
   link: /contact

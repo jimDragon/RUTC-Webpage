@@ -11,4 +11,4 @@ layout: home
 {% include carousel.html category=3 %}
 
 <!-- Media -->
-{% include media.html position=4 blob1="Photos" blob2="Videos" %}
+{% include media.html category=4 %}

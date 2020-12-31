@@ -1,10 +1,12 @@
-{% assign category = site.data.categories[include.position] %}
+{% assign category = site.data.categories[include.category] %}
+{% assign p_link = category.link1 %}
+{% assign v_link = category.link2 %}
 <section id="{{ category.name | downcase }}">
     <div class="wrapper">
         <h2>{{ category.name | upcase }}</h2>
         <div class="container container--blob">
-            <div class="blob"><a class="blob__link" href=""><h2>{{ include.blob1 }}</h2></a></div>
-            <div class="blob"><a class="blob__link" href=""><h2>{{ include.blob2 }}</h2></a></div>
+            <div class="blob"><a class="blob__link" href="{{ p_link | relative_url }}"><h2>Photos</h2></a></div>
+            <div class="blob"><a class="blob__link" href="{{ v_link | relative_url }}"><h2>Videos</h2></a></div>
         </div>
     </div>
 </section>
