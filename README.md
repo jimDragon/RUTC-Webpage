@@ -85,3 +85,11 @@ The `carousel.html` include is a wrapper for the `card.html` include.
 how the placement of the card is being determined, otherwise it will not work*
 
 The `card.html` include is used for displaying cards in the `carousel.html` include. Each card represents a page that you can navigate to (only from the card). It is also automatically generated from the frontmatter variables of the page you want to redirect to. These are: [card_category, card_cover, card_title, card_description ]
+
+
+## New stuff
+
+Image galleries are handled as folders with static files. See more here: https://mademistakes.com/notes/static-files/
+
+Added gallery include that serves the purpose of serving static file galleries and nothing else. `carousel.html` != `gallery.html`
+Gallery include takes as a parameter the category front matter attribute and matches it with the folder path. For example `assets/img/{{ category }}/`.

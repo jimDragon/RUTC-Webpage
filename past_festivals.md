@@ -10,4 +10,4 @@ pagination:
     enabled: true
     collection: festivals
 ---
-Check out all the historic Rock Under The Clock festivals!
+<p>Check out all the historic Rock Under The Clock festivals!</p>

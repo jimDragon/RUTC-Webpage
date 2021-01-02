@@ -1,0 +1,18 @@
+{% capture gpath %}
+assets/img/volunteers/
+{% endcapture %}
+
+{{ gpath }}
+
+<div class="panel">
+    <div class="wrapper-carousel">
+        <div class="container--card">
+            {% for image in site.static_files %}
+                {% if image.path contains gpath %}
+                    <h1>HELLO</h1>hello
+                    <img src="{{ image.path }}" alt="Volunteers">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -10,11 +10,23 @@
     }
 }
 
+.image_wrapper {
+    margin: 3rem 0 3rem 0;
+}
+
 // Used for centering content
 .wrapper {
     margin-right: auto;
     margin-left: auto;
     max-width: 90%;
+
+    h2, h3 {
+        margin-top: 2rem;
+    }
+    p {
+        margin: 2rem 0 2rem 0;
+        text-align: left;
+    }
 
     @include breakpoint(screen 1300px) {
         max-width: 1080px;
