@@ -9,5 +9,6 @@ permalink: /festivals/
 pagination:
     enabled: true
     collection: festivals
+    sort_reverse: true
 ---
 <p>Check out all the historic Rock Under The Clock festivals!</p>

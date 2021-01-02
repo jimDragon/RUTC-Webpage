@@ -9,5 +9,6 @@ permalink: /bands/
 pagination:
     enabled: true
     collection: bands
+    per_page: 9
 ---
-Check out all the workshops from Rock Under The Clock festivals!
+<p>Check out all the workshops from Rock Under The Clock festivals!</p>

@@ -9,5 +9,6 @@ permalink: /workshops/
 pagination:
     enabled: true
     collection: workshops
+    sort_reverse: true
 ---
-Check out all the workshops from Rock Under The Clock festivals!
+<p>Check out all the workshops from Rock Under The Clock festivals!</p>

@@ -9,5 +9,6 @@ permalink: /streets/
 pagination:
     enabled: true
     collection: streets
+    sort_reverse: true
 ---
-This is Street events page
+<p>This is Street events page</p>

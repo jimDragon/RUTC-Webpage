@@ -10,4 +10,4 @@ pagination:
     enabled: true
     collection: videos
 ---
-Check out videos from each festival!
+<p>Check out videos from each festival!</p>

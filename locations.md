@@ -10,4 +10,4 @@ pagination:
     enabled: true
     collection: locations
 ---
-Check out all the locations from Rock Under The Clock festivals!
+<p>Check out all the locations from Rock Under The Clock festivals!</p>
