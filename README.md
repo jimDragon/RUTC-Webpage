@@ -92,4 +92,4 @@ The `card.html` include is used for displaying cards in the `carousel.html` incl
 Image galleries are handled as folders with static files. See more here: https://mademistakes.com/notes/static-files/
 
 Added gallery include that serves the purpose of serving static file galleries and nothing else. `carousel.html` != `gallery.html`
-Gallery include takes as a parameter the category front matter attribute and matches it with the folder path. For example `assets/img/{{ category }}/`.
+Gallery include takes as a parameter the category front matter attribute which is the page.url and generates the gallery folder path. For example volunteers page volunteers.html will have a `/volunteers/ ` page url. So the gallery url will be `assets/img{{ pages.url }}`.
