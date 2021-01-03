@@ -2,5 +2,9 @@
 {% assign description = include.alt %}
 
 <div class="image_wrapper">
-    <img src="{{ img_path | absolute_url }}" alt="{{ description }}">
+{% if include.width %}
+    <img width="{{ include.width }}" src="{{ img_path | absolute_url }}" alt="{{ description }}">
+{% else %}
+    <img style="width: 100%; height: auto;" src="{{ img_path | absolute_url }}" alt="{{ description }}">
+{% endif %}
 </div>

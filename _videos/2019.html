@@ -1,0 +1,24 @@
+---
+# 2019 Videos
+layout: standard
+year: 2019
+title: Videos 2019
+image: assets/img/2019/poster_2019.jpg
+bands:
+    - placeholder
+bg: assets/img/2019/cover_2019_comp.jpg
+---
+
+{% assign general = site.data.videos[2019].general %}
+{% assign bands = site.data.videos[2019].bands %}
+
+
+<h2>Promo</h2>
+{% for item in general %}
+    {% include youtubePlayer.html id=item.link %}
+{% endfor %}
+
+<h2>Bands</h2>
+{% for item in bands %}
+    {% include youtubePlayer.html id=item.link %}
+{% endfor %}

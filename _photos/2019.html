@@ -1,0 +1,21 @@
+---
+# 2019 photos
+layout: standard
+year: 2019
+title: Photos 2019
+image: assets/img/2019/poster_2019.jpg
+bands:
+    - placeholder # so that it can have the gradient
+bg: assets/img/2019/cover_2019_comp.jpg
+---
+
+{% assign image_files = site.static_files | where: "image", true | where_exp: "item", "item.path contains 'volunteers'" %}
+
+<h2>Festival</h2>
+<div class="container">
+    {% for image in image_files %}
+        {% include image.html path=image.path alt="2019 Photo album" width="500" %}
+    {% endfor %}
+</div>
+
+<h2>Bands</h2>

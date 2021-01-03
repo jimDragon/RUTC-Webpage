@@ -1,6 +1,11 @@
-{% assign category = site.data.categories[include.category] %}
-{% assign p_link = category.link1 %}
-{% assign v_link = category.link2 %}
+{% if include.category %}
+    {% assign category = site.data.categories[include.category] %}
+    {% assign p_link = category.link1 %}
+    {% assign v_link = category.link2 %}
+{% else %}
+    {% capture v_link %}/videos/{{ include.year }}{% endcapture %}
+    {% capture p_link %}/photos/{{ include.year }}{% endcapture %}
+{% endif %}
 <section id="{{ category.name | downcase }}">
     <div class="wrapper">
         <h2>{{ category.name | upcase }}</h2>

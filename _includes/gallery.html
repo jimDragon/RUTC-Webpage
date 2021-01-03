@@ -1,16 +1,16 @@
 {% capture gpath %}assets/img{{ include.category }}{% endcapture %}
+{% assign image_files = site.static_files | where: "image", true | where_exp: "item", "item.path contains gpath" %}
 <div class="panel">
     <div class="wrapper-carousel">
         <div class="wrapper">
             <h2>Gallery</h2>
         </div>
         <div class="container--galleryimg">
-            {% for image in site.static_files %}
-                {% if image.path contains gpath %}
-                    <div class="galleryimg">
-                        <img src="{{ image.path }}" alt="Volunteers">
-                    </div>
-                {% endif %}
+            {% comment %} If the first image needs to be skipped, offset atribute can be used {% endcomment %}
+            {% for image in image_files %}
+                <div class="galleryimg">
+                    <img src="{{ image.path }}" alt="Volunteers">
+                </div>
             {% endfor %}
         </div>
     </div>

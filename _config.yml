@@ -22,6 +22,8 @@ collections:
     output: true
   videos:
     output: true
+  photos:
+    output: true
 
 # Defaults
 permalink: pretty
@@ -101,4 +103,8 @@ defaults:
         text: "Join this year's Street event!"
         btn: "Join the Event"
         link:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 

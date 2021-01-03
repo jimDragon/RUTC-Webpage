@@ -1,12 +1,12 @@
 ---
 layout: list
-title: Videos
-on_collection: videos
+title: Photos
+on_collection: photos
 image: assets/img/pastfestivals_c.jpg
 description: The big day that everyone is waiting for. Here you have the oportunity to see and appreciate big artists and local bands.
-permalink: /videos/
+permalink: /photos/
 pagination:
     enabled: true
-    collection: videos
+    collection: photos
 ---
-<p>Check out videos from each festival!</p>
+<p>Check out photos from each festival!</p>
