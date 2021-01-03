@@ -1,10 +1,18 @@
 $theme-colors: (
+//   "red": #F84444,
+//   "orange": #F76844,
+//   "accent": #5F897F,
+//   "light": #EEE7CB,
+//   "medium": #EEC98F,
+//   "dark": #19191B,
+//   "black": black,
+//   "white": white
   "red": #F84444,
-  "orange": #F76844,
-  "accent": #5F897F,
-  "light": #EEE7CB,
-  "medium": #EEC98F,
-  "dark": #19191B,
+  "orange": #ff754b,
+  "accent": #52616b,
+  "light": #f0f5f9,
+  "medium": #c9d6df,
+  "dark": #1e2022,
   "black": black,
   "white": white
 );
@@ -15,6 +23,11 @@ $font-weights: (
     "semibold": 600,
     "bold": 700
 );
+
+// $roundness: 20px; for blobs, cards, everything
+// $roundness: 63px; for buttons
+// 55px for pagination
+$roundness: 12px;
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -27,7 +40,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: map-get($theme-colors, "dark");
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto Condensed', arial;
     font-size: 1.2rem;
     color: map-get($theme-colors, "medium");
 }

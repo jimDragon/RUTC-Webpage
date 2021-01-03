@@ -11,7 +11,7 @@
 .btn {
     color: map-get($theme-colors, "white");
     padding: .7em 2em;
-    border-radius: 63px;
+    border-radius: $roundness;
     text-decoration: none;
     text-align: center;
     font-weight: map-get($font-weights, "medium");
@@ -46,15 +46,14 @@
     &--top {
         display: none;
         position: fixed;
-        width: 64px;
-        padding: 15px;
+        padding: 18px;
         bottom: 1em;
         right: 1em;
         border: none;
         outline: none;
         background-color: map-get($theme-colors, "medium");;
         cursor: pointer;
-        border-radius: 20px;
+        border-radius: $roundness;
         box-shadow: 0 8px 4px 1px rgba(0,0,0,0.2);
         z-index: 5;
         
@@ -65,15 +64,14 @@
 }
 
 .btn-back {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: map-get($theme-colors, "orange");
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    width: 5rem;
-    height: 5rem;
-    padding: 0.7rem;
+    padding: 0.8rem;
     font-weight: map-get($font-weights, "semibold");
     font-size: 1.5rem;
+    border-radius: 0 0 $roundness 0;
+    z-index: 100;
     cursor: pointer;
 }

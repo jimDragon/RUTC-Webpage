@@ -27,14 +27,14 @@
     justify-content: space-between;
     flex: 0 0 15rem;
     margin-right: 2rem;
-    border-radius: 20px;
+    border-radius: $roundness;
     color: map-get($theme-colors, "black");
     background-color: map-get($theme-colors, "light");
     box-shadow: 0 14px 10px rgba(0,0,0,0.2);
     transition: all .2s ease-in-out;
     
     img {
-        border-radius: 20px;
+        border-radius: $roundness;
         width: 100%;
     }
     

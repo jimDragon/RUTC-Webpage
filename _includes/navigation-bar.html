@@ -1,10 +1,10 @@
 <nav class="nav">
     <a href="#" class="hide-desktop">
-        <img class="menu" id="menu" src="{{ "assets/img/icons/ham_menu.svg" | relative_url }}" alt="Toggle menu">
+        <i class="fa fa-bars menu" id="menu" style="font-size:45px;"></i>
     </a>
 
     <ul class="nav__list show-desktop hide-mobile" id="nav">
-        <li id="exit" class="exit-btn hide-desktop"><img src="{{ "assets/img/icons/exit.svg" | relative_url }}" alt="Exit menu"></li>
+        <li id="exit" class="exit-btn hide-desktop"><i class="fa fa-close" style="font-size:45px;"></i></li>
         {% for category in site.data.categories %}
             <li class="nav__list-item"><a class="nav__link" href="#{{ category.name | downcase }}">{{ category.name | upcase }}</a></li>
         {% endfor %}
