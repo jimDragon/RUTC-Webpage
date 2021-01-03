@@ -1,13 +1,5 @@
 $theme-colors: (
-//   "red": #F84444,
-//   "orange": #F76844,
-//   "accent": #5F897F,
-//   "light": #EEE7CB,
-//   "medium": #EEC98F,
-//   "dark": #19191B,
-//   "black": black,
-//   "white": white
-  "red": #F84444,
+  "red": #ff5757,
   "orange": #ff754b,
   "accent": #52616b,
   "light": #f0f5f9,
@@ -18,9 +10,8 @@ $theme-colors: (
 );
 
 $font-weights: (
+    "thin": 300,
     "regular": 400,
-    "medium": 500,
-    "semibold": 600,
     "bold": 700
 );
 

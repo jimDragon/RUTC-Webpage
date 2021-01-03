@@ -10,8 +10,8 @@
     <div class="wrapper">
         <h2>{{ category.name | upcase }}</h2>
         <div class="container container--blob">
-            <div class="blob"><a class="blob__link" href="{{ p_link | relative_url }}"><h2>Photos</h2></a></div>
-            <div class="blob"><a class="blob__link" href="{{ v_link | relative_url }}"><h2>Videos</h2></a></div>
+            <a class="blob blob__link" href="{{ p_link | relative_url }}"><h2>Photos</h2></a>
+            <a class="blob blob__link" href="{{ v_link | relative_url }}"><h2>Videos</h2></a>
         </div>
     </div>
 </section>
