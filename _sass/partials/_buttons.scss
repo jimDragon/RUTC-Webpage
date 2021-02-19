@@ -60,6 +60,10 @@
         img {
             width: 100%
         }
+
+        &:hover {
+            background-color: map-get($theme-colors, "orange");
+        }
     }
 }
 

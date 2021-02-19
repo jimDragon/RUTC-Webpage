@@ -1,8 +1,33 @@
-{% assign footer = page.footer %}
+{% assign footer = site.data.links %}
+
 <div class="hide-corners"></div>
 <div class="footer">
     <div class="footer__content">
-        <div>{{ footer.text }}</div>
-        <a href="{{ footer.link }}" class="btn btn--info btn--center">{{ footer.btn }}</a>
+        <div class="footer__content--col">
+            <img src="{{ "/assets/img/lg.png" | relative_url }}" alt="">
+            <p>Find us on:</p>
+            <ul class="social">
+                <li><a href="#" target="_blank" class="fa fa-facebook"></a></li>
+                <li><a href="#" target="_blank" class="fa fa-instagram"></a></li>
+                <li><a href="#" target="_blank" class="fa fa-youtube"></a></li>
+            </ul>
+        </div>
+        <div class="footer__content--col">
+            <h3>Actions</h3>
+            <ul>
+                <li><a href="#" target="_blank">Street Events</a></li>
+                <li><a href="#" target="_blank">Workshops</a></li>
+                <li><a href="#" target="_blank">Charity</a></li>
+            </ul>
+        </div>
+        <div class="footer__content--col">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="#" target="_blank">Email</a></li>
+                <li><a href="#" target="_blank">Promotion</a></li>
+                <li><a href="#" target="_blank">Bands</a></li>
+            </ul>
+        </div>
     </div>
+    <div class="copy" style="">All Rights Reserved &#169; 2016-2021</div>
 </div>
