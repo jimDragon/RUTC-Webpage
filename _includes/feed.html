@@ -9,10 +9,11 @@
                 <a class="post-box__link" href="{{ post.url | relative_url }}">
                     <h3 class="post-box__date">{{ post.date | date_to_string }}</h3>
                     <h3 class="post-box__title">{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
                 </a>
             </div>
             {% endfor %}
-            <a class="btn btn--center btn--info" href="">{{ include.btn_text }}</a>
+            <a class="btn btn--center btn--info" href="{{ "/posts" | relative_url }}">{{ include.btn_text }}</a>
         </div>
     </div>
 </section>

@@ -12,7 +12,11 @@ layout: root
     {% include home-button.html %}
 
     <div class="page-title">
+        {% if page.author %}
+        <h2>{{ t }}</h2>
+        {% else %}
         <h2>{{ t | upcase }}</h2>
+        {% endif %}
     </div>
 </div>
 <div class="wrapper">
