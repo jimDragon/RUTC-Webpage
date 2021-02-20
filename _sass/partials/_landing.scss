@@ -15,8 +15,12 @@
     min-height: 70vh;
     
     img {
-       max-width: 100%;
+       max-width: 80%;
        height: auto;
        margin-bottom: 1.7em;
+
+       @include breakpoint(599px) {
+           max-width: 100%;
+       }
     }
 }
