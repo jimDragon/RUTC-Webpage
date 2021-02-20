@@ -20,7 +20,11 @@
             
             p {
                 padding: 0.2rem;
-                text-align: center;
+                text-align: left;
+
+                @include breakpoint(screen 899px) {
+                    text-align: center;
+                }
             }
 
             ul {
