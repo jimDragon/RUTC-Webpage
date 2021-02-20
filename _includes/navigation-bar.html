@@ -6,7 +6,11 @@
     <ul class="nav__list show-desktop hide-mobile" id="nav">
         <li id="exit" class="exit-btn hide-desktop"><i class="fa fa-close" style="font-size:38px;"></i></li>
         {% for category in site.data.categories %}
+            {% if category.name == "contact" %}
+            <li class="nav__list-item"><a class="nav__link" href="/{{ category.name | downcase }}">{{ category.name | upcase }}</a></li>
+            {% else %}
             <li class="nav__list-item"><a class="nav__link" href="#{{ category.name | downcase }}">{{ category.name | upcase }}</a></li>
+            {% endif %}
         {% endfor %}
     </ul>
 </nav>
