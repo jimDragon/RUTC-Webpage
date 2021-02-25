@@ -9,13 +9,11 @@ bands:
 bg: assets/img/2019/cover_2019_comp.jpg
 ---
 
+<!-- where image = true because it is set on the config -->
 {% assign image_files = site.static_files | where: "image", true | where_exp: "item", "item.path contains 'volunteers'" %}
 
-<h2>Festival</h2>
 <div class="container">
     {% for image in image_files %}
         {% include image.html path=image.path alt="2019 Photo album" width="500" %}
     {% endfor %}
 </div>
-
-<h2>Bands</h2>
