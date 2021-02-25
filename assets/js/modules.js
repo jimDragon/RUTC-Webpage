@@ -3,22 +3,21 @@ layout: # Removing front matter in order for js to work properly
 ---
 // This js file is responsible for hamburger menu, 
 // scroll navigation, top scroll button and history back button
+function navigation() {
+  let menu = document.getElementById('menu');
+  let nav = document.getElementById('nav');
+  let exit = document.getElementById('exit');
 
-let menu = document.getElementById('menu');
-let nav = document.getElementById('nav');
-let exit = document.getElementById('exit');
-
-// Open Menu
-menu.addEventListener('click', function(e) {
+  // Open Menu
+  if (menu) {
     nav.classList.toggle('hide-mobile');
-    e.preventDefault();
-})
-
-// Close Menu
-exit.addEventListener('click', function(e) {
+  }
+  // Close Menu
+  exit.addEventListener('click', function(e){
     nav.classList.add('hide-mobile');
     e.preventDefault();
-})
+  })
+}
 
 
 // Navigation Smooth Scrolling
@@ -69,10 +68,6 @@ $(document).ready(function(){
     });
 });
 
-// History back button
-function goBack() {
-  window.history.back();
-}
 
 // Lightbox gallery function
 function lightbox(obj) {
