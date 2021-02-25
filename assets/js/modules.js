@@ -4,9 +4,9 @@ layout: # Removing front matter in order for js to work properly
 // This js file is responsible for hamburger menu, 
 // scroll navigation, top scroll button and history back button
 
-var menu = document.getElementById('menu');
-var nav = document.getElementById('nav');
-var exit = document.getElementById('exit');
+let menu = document.getElementById('menu');
+let nav = document.getElementById('nav');
+let exit = document.getElementById('exit');
 
 // Open Menu
 menu.addEventListener('click', function(e) {
@@ -72,4 +72,22 @@ $(document).ready(function(){
 // History back button
 function goBack() {
   window.history.back();
+}
+
+// Lightbox gallery function
+function lightbox(obj) {
+
+	// Variables
+	let lightbox = document.getElementById("lightbox");
+	let lightboxImage = document.getElementById("img01");
+	let lightboxClose = document.getElementsByClassName("lightbox__close")[0];	// Get the <span> element that closes the modalk
+
+	// lightbox.style.display = "block";
+	lightbox.style.display = "grid";
+	lightboxImage.src = obj.src;
+
+  // When the user clicks on <span> (x), close the modalk
+	lightboxClose.onclick = function() {
+		lightbox.style.display = "none";
+	} 
 }

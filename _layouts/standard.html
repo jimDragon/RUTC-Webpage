@@ -23,6 +23,12 @@ layout: root
     {{ content }}
 </div>
 
+<!-- Lightbox gallery -->
+<div id="lightbox" class="lightbox__bg">
+    <span class="lightbox__close">&times;</span>
+    <img class="lightbox__content" id="img01">
+</div>
+
 <!-- Carousel -->
 {% if page.gallery == true %}
     {% include gallery.html category=page.url %}

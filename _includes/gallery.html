@@ -9,7 +9,7 @@
             {% comment %} If the first image needs to be skipped, offset atribute can be used {% endcomment %}
             {% for image in image_files %}
                 <div class="galleryimg">
-                    <img src="{{ image.path }}" alt="Volunteers">
+                    <img  onclick="lightbox(this)" src="{{ image.path }}" alt="">
                 </div>
             {% endfor %}
         </div>
