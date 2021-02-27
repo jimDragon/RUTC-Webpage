@@ -8,9 +8,37 @@
 		<link href="{{ "assets/css/styles.css" | relative_url }}" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- seo -->
+		<title>{% if page.layout == "home" %}{{ site.title }}{% else %}{{ site.title }} // {{ page.title | upcase }}{% endif %}</title>
+		<meta name="description" content="{{ site.description }}">
+		<meta name="author" content="{{ site.author }}">
+
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="{{ site.site_name }}">
+		<meta property="og:title" content="{{ site.title }}">
+		<meta property="og:url" content="{{ site.url }}">
+		<meta property="og:image" content="{{ site.image | relative_url }}">
+	  	<meta property="og:description" content="{{ site.description }}">
+
+		<link rel="canonical" href="{{ site.url }}">
+
+		<script type="application/ld+json">
+		  {
+			"@context": "https://schema.org",
+			
+			  "@type": "Person",
+			  "name": "{{ site.author }}",
+			  "url": "{{ site.url }}",
+		  }
+		</script>
+
+	  	<meta name="google-site-verification" content=""/>
+			
 		<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.png" | relative_url }}"/>
 		<meta name="theme-color" content="#19191B">
-		<title>{% if page.layout == "home" %}{{ site.title }}{% else %}{{ site.title }} // {{ page.title | upcase }}{% endif %}</title>
+		<!-- end seo -->
 	</head>
 	<body>
 		{{ content }}

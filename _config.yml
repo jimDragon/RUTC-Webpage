@@ -1,7 +1,12 @@
 # Setup
 title: RUTC
-# baseurl: /RUTC-Webpage # For gh-pages
+url: rockundertheclock.gr
 baseurl: ""
+site_name: Rock Under The Clock
+image: assets/img/home_c.jpg
+description: Chania's landmark festival and an experience you don't want to miss. Rock Under The Clock Festival is here!
+author: Dimitris Pramateftakis
+github: https://github.com/dimpram
 exclude: ["README.md"]
 
 # Plugins
