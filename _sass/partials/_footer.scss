@@ -9,10 +9,10 @@
         max-width: 90%;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         &--col {
             padding: 2rem;
-            text-align: left;
            
             img {
                 width: 180px;
@@ -20,7 +20,7 @@
             
             p {
                 padding: 0.2rem;
-                text-align: left;
+                text-align: center;
 
                 @include breakpoint(screen 899px) {
                     text-align: center;
