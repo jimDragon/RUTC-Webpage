@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5 {
     color: var(--clr-orange);
 }
 
+html {
+    height: 100vh;
+}
+
 :root {
     --clr-red: #F84444;
     --clr-orange: #F76844;
@@ -26,6 +30,7 @@ h1, h2, h3, h4, h5 {
 
 body {
     color: var(--clr-dark);
+    background-color: var(--clr-light);
     font-family: 'Quicksand', sans-serif;
 	font-size: 0.6rem;
 	overflow: hidden;
@@ -41,6 +46,11 @@ header {
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* .container {
+    margin: 0 auto;
+    width: 900px;
+} */
 
 /* Primary btn animation */
 @keyframes move {
@@ -169,6 +179,25 @@ header {
 
 .fa-instagram {
 	color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 100vh;
+}
+  
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 @media only screen and (min-height: 620px) and (min-width: 620px) {
