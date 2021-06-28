@@ -45,22 +45,12 @@
       <div class="logo">
         <img src="rutc_s.png" alt="festival's logo">
         <div class="card">
-          <h3 class="text">Coming soon!<h3>
-          <h3 id="countdown">
-            <div class="days">
-              <div class="c-number">0</div>days</div>
-            <div class="hours">
-              <div class="c-number">0</div>hours</div>
-            <div class="minutes">
-              <div class="c-number">0</div>minutes</div>
-            <div class="seconds">
-              <div class="c-number">0</div>seconds</div>
-            <div class="left">LEFT</div>
-          </h3>
+          <h3 class="text">RUTC 2021<h3>
+          <h3 id="countdown"></h3>
         </div>
-        <a class="btn btn-primary" href="#">Join The Event</a>
+        <a class="btn btn-primary" href="https://www.facebook.com/events/362470751889715/?ref=newsfeed">Join The Event</a>
       </div>
-      
+     
       <!-- Social Media -->
       <div class="social">
         <a href="https://www.facebook.com/rockundertheclock"  target="_blank" class="fa fa-facebook"></a>
@@ -68,6 +58,36 @@
         <a href="https://www.instagram.com/rockundertheclock/"  target="_blank" class="fa fa-instagram"></a>
       </div>
     </header>
+
+    <script>
+      const year = new Date().getFullYear();
+      const choosenDate = new Date("Aug 13, 2021 18:00:00").getTime();
+
+      let countdown = setInterval(function() {
+
+        const today = new Date().getTime();
+
+        const diff = choosenDate - today;
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          "<div class=\"days\"> \
+        <div class=\"c-number\">" + days + "</div>days</div> \
+      <div class=\"hours\"> \
+        <div class=\"c-number\">" + hours + "</div>hours</div> \
+      <div class=\"minutes\"> \
+        <div class=\"c-number\">" + minutes + "</div>minutes</div> \
+      <div class=\"seconds\"> \
+        <div class=\"c-number\">" + seconds + "</div>seconds</div> \
+      <div class=\"left\">LEFT</div>\
+      </div>";
+
+      }, 1000);
+    </script>
 
 </body>
 </html>

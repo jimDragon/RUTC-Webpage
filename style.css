@@ -73,9 +73,9 @@ header {
 	margin-top: 0.5rem;
 }
 
-/* .btn:hover {
+.btn:hover {
     filter: brightness(1.2);
-} */
+}
 
 .btn-center {
     margin-right: auto;
@@ -84,10 +84,9 @@ header {
 }
 
 .btn-primary {
-    opacity: 60%;
-    background-color: #b1a9ad;
-    /* box-shadow: 0px 6px 6px #AD2929; */
-    /* animation: move 1s infinite alternate; */
+    background-color: var(--clr-red);
+    box-shadow: 0px 6px 6px #AD2929;
+    animation: move 1s infinite alternate;
 }
 
 .btn-info {
@@ -129,7 +128,6 @@ header {
 }
 
 .days, .hours, .minutes, .seconds, .left, .text {
-  opacity: 70%;
   display: inline-block;
   background-color: var(--clr-white);
   margin: 0.2rem;
@@ -142,7 +140,7 @@ header {
 }
 
 .text {
-	background-color: #b1a9ad;
+	background-color: var(--clr-red);
 	color: var(--clr-white);
 }
 
